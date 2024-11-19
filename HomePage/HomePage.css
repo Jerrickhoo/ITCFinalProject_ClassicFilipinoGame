@@ -314,11 +314,11 @@ header,
   box-shadow: 10px 10px 10px #181818;
 }
 
-.individualGameSection {
+.individualGameSection{
   font-family: 'Karla', sans-serif;
   width: 200px;
-  height: 220px; /* Set initial fixed height */
-  padding: 15px;
+  height: 300px; /* Increased height for hover effect */
+  padding: 10px;
   background-color: #AAC7DB;
   border: 2px solid #4a4a4a;
   border-radius: 8px;
@@ -326,8 +326,7 @@ header,
   overflow: hidden;
   color: #768A96;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease,
-    border-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 #gameSectionTitle {
@@ -342,11 +341,23 @@ header,
   border-color: #7c7c7c;
 }
 
+.individualGameSection .logo {
+  height: 100px; /* Fixed height for the logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures image doesn't overflow */
+}
+
 .individualGameSection .logo img {
-  width: 40px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures image fits well */
+}
+
+.gameContent {
+  text-align: center;
+  margin-top: 10px;
 }
 
 .gameContent h3 {
@@ -358,24 +369,22 @@ header,
 }
 
 .summary {
-  font-family: 'Karla', sans-serif;
   font-size: 12px;
   color: #29353C;
   margin-bottom: 5px;
 }
 
 .moreText {
-  font-family: 'Karla', sans-serif;
   font-size: 12px;
   color: #44567D;
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .individualGameSection:hover .moreText {
-  max-height: 100px; /* Adjust to reveal more text smoothly */
+  max-height: 100px; /* Enough to display additional text */
   opacity: 1;
 }
 
