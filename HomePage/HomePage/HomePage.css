@@ -40,7 +40,7 @@ header,
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #1c1c1c;
+  background-image: linear-gradient(to right, #000000, #2135ca);
   font-family: Tahoma, "Times New Roman", Times, serif;
   max-width: 100vw;
 }
@@ -82,9 +82,9 @@ header,
 .header .login a {
   font-size: 13px;
   font-weight: bold;
-  color: #1764a2;
+  color: #081d2f;
   background-color: transparent;
-  border: 1px solid #1764a2;
+  border: 1px solid #081d2f;
   border-radius: 20px;
   padding: 8px 50px;
   text-decoration: none;
@@ -92,8 +92,8 @@ header,
 }
 
 .header .login a:hover {
-  background-color: rgb(201, 218, 251);
-  border-color: #e0e0e0;
+  background-color: #4078e9;
+  border-color: #1f3d7a;
   color: #121212;
 }
 
@@ -246,7 +246,7 @@ header,
 
 #sidePanel:hover {
   width: 200px;
-  border: 5px solid #979695;
+  border: 3px solid #575656;
 }
 
 .individualSidePanel {
