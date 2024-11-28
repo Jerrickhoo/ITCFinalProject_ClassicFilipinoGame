@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luksong Baka</title>
+    <link rel="stylesheet" href="LuksongBaka.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Karla:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+    <script
+      src="https://kit.fontawesome.com/4da0ed7177.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="title">
+          <a href="#">
+            <img src="Picture/logoPlaceholder.png" />
+            <span>LaroKultura</span>
+          </a>
+        </div>
+        <div class="nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Games</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="login">
+          <a href="#" onclick="openLoginModal()">Login</a>
+        </div>
+      </header>
+
+      <!-- Sidebar -->
+      <div id="sidePanel">
+        <div class="individualSidePanel">
+          <img src="Picture/bx-question-mark.svg" />
+          <span class="sidePanelText">What's New?</span>
+        </div>
+        <div class="individualSidePanel">
+          <img src="Picture/bx-alarm-exclamation.svg" />
+          <span class="sidePanelText">Latest Alerts</span>
+        </div>
+        <div class="individualSidePanel">
+          <img src="Picture/bx-group.svg" />
+          <span class="sidePanelText">Community</span>
+        </div>
+      </div>
+
+      <!-- Game Section -->
+      <section id="gameSection">
+        <div class="game-header">
+          <h1>Luksong Baka</h1>
+          <p>A traditional Filipino game from Bulacan involving jumping over a "baka."</p>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="section intro">
+          <h2>Introduction</h2>
+          <p>
+            Luksong Baka is a Filipino children's game from Bulacan. It involves players jumping over a crouching person (the "baka"). As the game progresses, the baka rises higher, increasing the challenge. This game is a variation of leapfrog and is both fun and physically engaging.
+          </p>
+          <div class="image-container">
+            <img src="Picture/gamePlaceholder.png" alt="Image" />
+            <p class="image-caption">image caption(kay wla pa man pic di lang danay).</p>
+          </div>
+        </div>
+
+        <!-- How to Play Section -->
+        <div class="section how-to-play">
+          <h2>How to Play</h2>
+          <ol>
+            <li>Assign one player as the "baka" (cow).</li>
+            <li>The baka crouches, and other players must jump over without touching them.</li>
+            <li>The baka gradually stands higher, increasing the difficulty.</li>
+            <li>If a player touches the baka while jumping, they become the new baka.</li>
+          </ol>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="section tips">
+          <h2>Tips</h2>
+          <ul>
+            <li>Focus on maintaining a steady jump to clear the baka safely.</li>
+            <li>Coordinate movements to avoid bumping into others.</li>
+            <li>Ensure the baka has a stable crouching position for everyone’s safety.</li>
+          </ul>
+        </div>
+
+        <!-- Watch How to Play Section -->
+        <div class="section video-tutorial">
+          <h2>Watch How to Play</h2>
+          <div class="image-container">
+            <video controls>
+              <source src="videos/luksong_baka_placeholder.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p class="image-caption">Watch the video on how to play Luksong Baka.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="LuksongBaka.js"></script>
+  </body>
+</html>

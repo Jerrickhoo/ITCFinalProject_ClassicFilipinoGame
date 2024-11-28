@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Langit Lupa</title>
+    <link rel="stylesheet" href="LangitLupa.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Karla:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+    <script
+      src="https://kit.fontawesome.com/4da0ed7177.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="title">
+          <a href="#">
+            <img src="Picture/logoPlaceholder.png" />
+            <span>LaroKultura</span>
+          </a>
+        </div>
+        <div class="nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Games</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="login">
+          <a href="#" onclick="openLoginModal()">Login</a>
+        </div>
+      </header>
+
+      <!-- Sidebar -->
+      <div id="sidePanel">
+        <div class="individualSidePanel">
+          <img src="Picture/bx-question-mark.svg" />
+          <span class="sidePanelText">What's New?</span>
+        </div>
+        <div class="individualSidePanel">
+          <img src="Picture/bx-alarm-exclamation.svg" />
+          <span class="sidePanelText">Latest Alerts</span>
+        </div>
+        <div class="individualSidePanel">
+          <img src="Picture/bx-group.svg" />
+          <span class="sidePanelText">Community</span>
+        </div>
+      </div>
+
+      <!-- Game Section -->
+      <section id="gameSection">
+        <div class="game-header">
+          <h1>Langit Lupa</h1>
+          <p>A fun Filipino chasing game involving "heaven" and "earth."</p>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="section intro">
+          <h2>Introduction</h2>
+          <p>
+            Langit Lupa is a classic Filipino children's game that involves a chaser ("taya") and other players running between elevated ("langit") and ground-level ("lupa") areas. Players aim to avoid being tagged by the taya while moving to new positions after each chant.
+          </p>
+          <div class="image-container">
+            <img src="Picture/gamePlaceholder.png" alt="Image" />
+            <p class="image-caption">image caption(kay wla pa man pic di lang danay).</p>
+          </div>
+        </div>
+
+        <!-- How to Play Section -->
+        <div class="section how-to-play">
+          <h2>How to Play</h2>
+          <ol>
+            <li>Determine the "taya" by using a chant like "Langit, lupa, impyerno."</li>
+            <li>Players start on the ground ("lupa") and run to elevated areas ("langit") to avoid being tagged.</li>
+            <li>The taya cannot tag players on elevated positions, but players must move after each chant ends.</li>
+            <li>The tagged player becomes the new taya, and the game continues.</li>
+          </ol>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="section tips">
+          <h2>Tips</h2>
+          <ul>
+            <li>Stay alert and ready to move when the chant ends.</li>
+            <li>Find the closest elevated spot to avoid being tagged.</li>
+            <li>Coordinate with other players to distract the taya.</li>
+          </ul>
+        </div>
+
+        <!-- Watch How to Play Section -->
+        <div class="section video-tutorial">
+          <h2>Watch How to Play</h2>
+          <div class="image-container">
+            <video controls>
+              <source src="videos/langit_lupa_placeholder.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p class="image-caption">Watch the video on how to play Langit Lupa.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="LangitLupa.js"></script>
+  </body>
+</html>
