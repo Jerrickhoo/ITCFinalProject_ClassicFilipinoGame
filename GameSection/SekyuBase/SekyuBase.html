@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sekyu Base</title>
+    <link rel="stylesheet" href="SekyuBase.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Karla:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+    <script
+      src="https://kit.fontawesome.com/4da0ed7177.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="title">
+          <a href="#">
+            <img src="Picture/logoPlaceholder.png" />
+            <span>LaroKultura</span>
+          </a>
+        </div>
+        <div class="nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Games</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="login">
+          <a href="#" onclick="openLoginModal()">Login</a>
+        </div>
+      </header>
+
+      <!-- Sidebar -->
+      <div id="sidePanel">
+        <div class="individualSidePanel">
+          <img src="Picture/bx-question-mark.svg" />
+          <span class="sidePanelText">What's New?</span>
+        </div>
+        <div class="individualSidePanel">
+          <img src="Picture/bx-alarm-exclamation.svg" />
+          <span class="sidePanelText">Latest Alerts</span>
+        </div>
+        <div class="individualSidePanel">
+          <img src="Picture/bx-group.svg" />
+          <span class="sidePanelText">Community</span>
+        </div>
+      </div>
+
+      <!-- Game Section -->
+      <section id="gameSection">
+        <div class="game-header">
+          <h1>Sekyu Base</h1>
+          <p>A Filipino team game where you protect your base and rescue your teammates.</p>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="section intro">
+          <h2>Introduction</h2>
+          <p>
+            Sekyu Base is a Filipino outdoor game played by two teams. The goal is to protect your own base while trying to tag the opponent's base and rescue captured teammates. Players need to work together and be quick to win the game.
+          </p>
+          <div class="image-container">
+            <img src="Picture/gamePlaceholder.png" alt="Image" />
+            <p class="image-caption">image caption(kay wla pa man pic di lang danay).</p>
+          </div>
+        </div>
+
+        <!-- How to Play Section -->
+        <div class="section how-to-play">
+          <h2>How to Play</h2>
+          <ol>
+            <li>Each team has a base and players must protect their base.</li>
+            <li>Tagging the opponent's base and rescuing teammates is key to scoring.</li>
+            <li>If a player is tagged, they are captured at the opponent's base until rescued by a teammate.</li>
+          </ol>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="section tips">
+          <h2>Tips</h2>
+          <ul>
+            <li>Assign a player to guard your base while others attack.</li>
+            <li>Work together to rescue captured teammates quickly.</li>
+            <li>Use strategic movements to confuse the opposing team.</li>
+          </ul>
+        </div>
+
+        <!-- Watch How to Play Section -->
+        <div class="section video-tutorial">
+          <h2>Watch How to Play</h2>
+          <div class="image-container">
+            <video controls>
+              <source src="videos/sekyu_base_placeholder.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p class="image-caption">Watch the video on how to play Sekyu Base.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="SekyuBase.js"></script>
+  </body>
+</html>
