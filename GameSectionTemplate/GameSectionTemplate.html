@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameSection</title>
+    <link rel="stylesheet" href="GameSectionTemplate.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4da0ed7177.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!--!=====================================================================================================================================================-->
+      <!--*Header-->
+      <!--!=====================================================================================================================================================-->
+
+      <header class="header">
+        <div class="title">
+          <a href="http://127.0.0.1:5500/HomePage/HomePage/HomePage.html">
+            <img src="Picture/logoPlaceholder.png" />
+            <span>LaroKultura</span>
+          </a>
+        </div>
+
+        <div class="nav">
+          <a href="#">Game Info</a>
+          <a href="#">Media</a>
+          <a href="#">News</a>
+          <a href="#">Leaderboards</a>
+          <a href="#">Support</a>
+          <a href="#">More</a>
+        </div>
+
+        <div class="setting">
+          <a href="#"><img src="Picture/gear-solid.svg" alt="Settings" /></a>
+        </div>
+
+        <div class="login">
+          <a href="#" onclick="openLoginModal()">Login</a>
+        </div>
+      </header>
+
+      <!--!=====================================================================================================================================================-->
+      <!--*loginModal-->
+      <!--!=====================================================================================================================================================-->
+
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeLoginModal()">&times;</span>
+          <h2>Login</h2>
+          <form id="loginForm" onsubmit="processLogin(event)">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--!=====================================================================================================================================================-->
+<!--*Side Panel-->
+<!--!=====================================================================================================================================================-->
+
+<div id="sidePanel">
+  <div class="individualSidePanel">
+    <img src="Picture/bx-question-mark.svg" />
+    <span class="sidePanelText">What's New?</span>
+  </div>
+  <div class="individualSidePanel">
+    <img src="Picture/bx-alarm-exclamation.svg" />
+    <span class="sidePanelText">Latest Alerts</span>
+  </div>
+  <div class="individualSidePanel">
+    <img src="Picture/bx-group.svg" />
+    <span class="sidePanelText">Community</span>
+  </div>
+</div>
+
+<!--!=====================================================================================================================================================-->
+<!--*Side Panel-->
+<!--!=====================================================================================================================================================-->
+
+<div id="sidePanel">
+  <div class="individualSidePanel">
+    <img src="Picture/bx-question-mark.svg" />
+    <span class="sidePanelText">What's New?</span>
+  </div>
+  <div class="individualSidePanel">
+    <img src="Picture/bx-alarm-exclamation.svg" />
+    <span class="sidePanelText">Latest Alerts</span>
+  </div>
+  <div class="individualSidePanel">
+    <img src="Picture/bx-group.svg" />
+    <span class="sidePanelText">Community</span>
+  </div>
+</div>

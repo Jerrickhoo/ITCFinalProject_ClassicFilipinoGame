@@ -53,7 +53,7 @@ header,
 }
 
 .header .nav a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
@@ -83,12 +83,13 @@ header,
   font-size: 13px;
   font-weight: bold;
   color: #081d2f;
-  background-color: transparent;
+  background-color: #535cc1;
   border: 1px solid #081d2f;
   border-radius: 20px;
   padding: 8px 50px;
   text-decoration: none;
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .header .login a:hover {
@@ -165,7 +166,7 @@ header,
 
 .modal-content h2 {
   margin-bottom: 20px;
-  color: #FFC107;
+  color: #ffc107;
 }
 
 .modal-content label {
@@ -186,7 +187,7 @@ header,
 
 .modal-content button {
   padding: 10px 20px;
-  background-color: #FFC107;
+  background-color: #ffc107;
   color: #121212;
   border: none;
   border-radius: 5px;
@@ -195,7 +196,7 @@ header,
 }
 
 .modal-content button:hover {
-  background-color: #FFD54F;
+  background-color: #ffd54f;
 }
 
 .modal-content .close {
@@ -271,7 +272,7 @@ header,
 }
 
 .sidePanelText {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   margin-left: 10px;
   font-size: 14px;
   color: #e0e0e0;
@@ -312,7 +313,7 @@ header,
 }
 
 .individualGameSection {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   width: 200px;
   height: 300px;
   padding: 10px;
@@ -323,11 +324,12 @@ header,
   overflow: hidden;
   color: #e0e0e0;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 #gameSectionTitle {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   color: #124c7b;
   margin-left: 30px;
 }
@@ -358,7 +360,7 @@ header,
 }
 
 .gameContent h3 {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 16px;
   color: #e0e0e0;
   margin-bottom: 5px;
@@ -388,19 +390,19 @@ header,
 !===================================================================================================*/
 
 #commentSectionTitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: left;
   margin-top: 20px;
   margin-left: 120px;
   font-size: 18px;
-  color: #44567D;
+  color: #44567d;
 }
 
 #commentSectionContainer {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #44567D;
+  background-color: #44567d;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
@@ -424,21 +426,21 @@ textarea#commentInput {
   border-radius: 8px;
   padding: 10px;
   border: 1px solid #444;
-  background-color: #44567D;
+  background-color: #44567d;
   color: #e0e0e0;
   resize: none;
   font-size: 14px;
 }
 
 textarea#commentInput::placeholder {
-  color: #AAC7DB;
+  color: #aac7db;
 }
 
 button {
   margin-top: 10px;
   padding: 8px 15px;
-  background-color: #29353C;
-  color: #AAC7DB;
+  background-color: #29353c;
+  color: #aac7db;
   border: none;
   border-radius: 5px;
   font-size: 14px;
@@ -446,7 +448,7 @@ button {
 }
 
 button:hover {
-  background-color: #768A96;
+  background-color: #768a96;
 }
 
 /* Comments List */
@@ -473,23 +475,23 @@ button:hover {
 }
 
 .comment-user {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: bold;
-  color: #29353C;
+  color: #29353c;
   margin-right: 10px;
   font-size: 14px;
 }
 
 .comment-text {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   margin: 5px 0;
-  color: #AAC7DB;
+  color: #aac7db;
   font-size: 14px;
 }
 
 .comment-time {
   font-size: 12px;
-  color: #768A96;
+  color: #768a96;
   margin-left: 5px;
 }
 
@@ -501,14 +503,14 @@ button:hover {
 }
 
 .comment-actions button {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   background: none;
   border: none;
-  color: #768A96;
+  color: #768a96;
   cursor: pointer;
   font-size: 14px;
 }
 
 .comment-actions button:hover {
-  color: #DFEBF6;
+  color: #dfebf6;
 }
