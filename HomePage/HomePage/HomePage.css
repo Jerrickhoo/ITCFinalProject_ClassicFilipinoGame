@@ -166,7 +166,7 @@ header,
 
 .modal-content h2 {
   margin-bottom: 20px;
-  color: #ffc107;
+  color: #535cc1;
 }
 
 .modal-content label {
@@ -187,7 +187,7 @@ header,
 
 .modal-content button {
   padding: 10px 20px;
-  background-color: #ffc107;
+  background-color: #535cc1;
   color: #121212;
   border: none;
   border-radius: 5px;
@@ -196,7 +196,7 @@ header,
 }
 
 .modal-content button:hover {
-  background-color: #ffd54f;
+  background-color: #535cc1;
 }
 
 .modal-content .close {
@@ -235,8 +235,9 @@ header,
   flex-direction: column;
   align-items: center;
   position: fixed;
-  right: 0;
-  top: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
   margin-right: 3px;
   width: 45px;
   background-color: #575656;

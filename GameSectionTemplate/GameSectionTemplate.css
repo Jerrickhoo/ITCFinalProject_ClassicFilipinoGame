@@ -8,6 +8,9 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
   background-color: #121212;
   color: #e0e0e0;
 }
@@ -43,6 +46,7 @@ header,
   background-image: linear-gradient(to right, #000000, #2135ca);
   font-family: Tahoma, "Times New Roman", Times, serif;
   max-width: 100vw;
+  margin: 0 auto;
 }
 
 .header .nav {
@@ -163,7 +167,7 @@ header,
 
 .modal-content h2 {
   margin-bottom: 20px;
-  color: #ffc107;
+  color: #4078e9;
 }
 
 .modal-content label {
@@ -184,7 +188,7 @@ header,
 
 .modal-content button {
   padding: 10px 20px;
-  background-color: #ffc107;
+  background-color: #4078e9;
   color: #121212;
   border: none;
   border-radius: 5px;
@@ -193,7 +197,7 @@ header,
 }
 
 .modal-content button:hover {
-  background-color: #ffd54f;
+  background-color: #4078e9;
 }
 
 .modal-content .close {
@@ -217,8 +221,9 @@ header,
   flex-direction: column;
   align-items: center;
   position: fixed;
-  right: 0;
-  top: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
   margin-right: 3px;
   width: 45px;
   background-color: #575656;
@@ -399,4 +404,86 @@ button:hover {
 
 .comment-actions button:hover {
   color: #dfebf6;
+}
+
+/* !================================================================================================
+*gameSection 
+!===================================================================================================*/
+
+#gameSection {
+  padding: 30px;
+  margin: 20px auto;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+#gameSection .game-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#gameSection .game-header h1 {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffc107;
+}
+
+#gameSection .game-header p {
+  font-size: 16px;
+  color: #aac7db;
+}
+
+#gameSection .section {
+  margin-bottom: 30px;
+}
+
+#gameSection .section h2 {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+#gameSection .section p,
+#gameSection .section ul,
+#gameSection .section ol {
+  font-size: 16px;
+  color: #e0e0e0;
+}
+
+#gameSection .section ul li,
+#gameSection .section ol li {
+  margin-bottom: 10px;
+}
+
+#gameSection .section.video-tutorial video {
+  display: block;
+  max-width: 100%;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 600px; /* Adjust the width as needed */
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+}
+
+.image-container .image-caption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #e0e0e0;
+  text-align: center;
 }
