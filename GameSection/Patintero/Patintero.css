@@ -1,489 +1,598 @@
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: "Times New Roman", Times, serif;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-  
-  .container {
-    max-width: 1400px;
-    width: 100%;
-    background-color: #1e1e1e;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-    border-radius: 12px;
-    box-sizing: border-box;
-  }
-  
-  header,
-  #gameSection,
-  #sidePanel,
-  #introVideo,
-  #commentSection {
-    max-width: 100%;
-  }
-  
-  /* !================================================================================================
-    *Header 
-    !===================================================================================================*/
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-image: linear-gradient(to right, #000000, #2135ca);
-    font-family: Tahoma, "Times New Roman", Times, serif;
-    max-width: 100vw;
-    margin: 0 auto;
-  }
-  
-  .header .nav {
-    display: flex;
-    gap: 15px;
-    flex-grow: 1;
-    justify-content: center;
-  }
-  
-  .header .nav a {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-    color: #e0e0e0;
-    background-color: transparent;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .header .nav a:hover {
-    background-color: #1764a2;
-    color: #121212;
-  }
-  
-  .header .setting img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .header .login {
-    margin-left: 15px;
-  }
-  
-  .header .login a {
-    font-size: 13px;
-    font-weight: bold;
-    color: #081d2f;
-    background-color: #535cc1;
-    border: 1px solid #081d2f;
-    border-radius: 20px;
-    padding: 8px 50px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, border-color 0.3s ease,
-      color 0.3s ease;
-  }
-  
-  .header .login a:hover {
-    background-color: #4078e9;
-    border-color: #1f3d7a;
-    color: #121212;
-  }
-  
-  .header .title {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header .title a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: transform 0.2s ease, color 0.2s ease;
-  }
-  
-  .header .title a:hover {
-    transform: scale(1.1);
-  }
-  
-  .header .title a:active {
-    transform: scale(1.05);
-  }
-  
-  .header .title img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .header .title span {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e2f2ff;
-  }
-  
-  .header .title a:hover img {
-    transform: scale(1.2);
-  }
-  
-  .header .title a:hover span {
-    color: #d0e9fd;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background-color: #1c1c1c;
-    color: #e0e0e0;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-  }
-  
-  .modal-content h2 {
-    margin-bottom: 20px;
-    color: #4078e9;
-  }
-  
-  .modal-content label {
-    display: block;
-    margin-bottom: 5px;
-    text-align: left;
-  }
-  
-  .modal-content input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #444;
-    background-color: #2b2b2b;
-    color: #e0e0e0;
-  }
-  
-  .modal-content button {
-    padding: 10px 20px;
-    background-color: #4078e9;
-    color: #121212;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .modal-content button:hover {
-    background-color: #4078e9;
-  }
-  
-  .modal-content .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #e0e0e0;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .modal-content .close:hover {
-    color: #fff;
-  }
-  
-  /* !================================================================================================
-  *Side Panel 
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  background-color: #1e1e1e;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+header,
+#gameSection,
+#sidePanel,
+#introVideo,
+#commentSection {
+  max-width: 100%;
+}
+
+/* !================================================================================================
+  *Header 
   !===================================================================================================*/
-  #sidePanel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
-    margin-right: 3px;
-    width: 45px;
-    background-color: #575656;
-    border-radius: 25px;
-    overflow: hidden;
-    transition: width 0.3s ease;
-  }
-  
-  #sidePanel:hover {
-    width: 200px;
-    border: 3px solid #575656;
-  }
-  
-  .individualSidePanel {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-    border-radius: 25px;
-    margin: 0px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .individualSidePanel:hover {
-    background-color: #979695;
-  }
-  
-  .individualSidePanel img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.2s ease;
-  }
-  
-  .sidePanelText {
-    font-family: "Karla", sans-serif;
-    margin-left: 10px;
-    font-size: 14px;
-    color: #e0e0e0;
-    opacity: 0;
-    white-space: nowrap;
-    transition: opacity 0.3s ease;
-  }
-  
-  #sidePanel:hover .sidePanelText {
-    opacity: 1;
-  }
-  
-  #sidePanel:hover .individualSidePanel img {
-    transform: scale(1.2);
-  }
-  
-  /* !================================================================================================
-  *Comment Section 
-  !===================================================================================================*/
-  
-  #commentSectionTitle {
-    font-family: "Montserrat", sans-serif;
-    text-align: left;
-    margin-top: 20px;
-    margin-left: 120px;
-    font-size: 18px;
-    color: #44567d;
-  }
-  
-  #commentSectionContainer {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #44567d;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  .add-comment {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    gap: 10px;
-  }
-  
-  .add-comment img.comment-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  
-  textarea#commentInput {
-    flex: 1;
-    height: 60px;
-    border-radius: 8px;
-    padding: 10px;
-    border: 1px solid #444;
-    background-color: #44567d;
-    color: #e0e0e0;
-    resize: none;
-    font-size: 14px;
-  }
-  
-  textarea#commentInput::placeholder {
-    color: #aac7db;
-  }
-  
-  button {
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #29353c;
-    color: #aac7db;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #768a96;
-  }
-  
-  /* Comments List */
-  #comments {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .comment {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    gap: 10px;
-  }
-  
-  .comment-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  
-  .comment-content {
-    flex: 1;
-  }
-  
-  .comment-user {
-    font-family: "Karla", sans-serif;
-    font-weight: bold;
-    color: #29353c;
-    margin-right: 10px;
-    font-size: 14px;
-  }
-  
-  .comment-text {
-    font-family: "Karla", sans-serif;
-    margin: 5px 0;
-    color: #aac7db;
-    font-size: 14px;
-  }
-  
-  .comment-time {
-    font-size: 12px;
-    color: #768a96;
-    margin-left: 5px;
-  }
-  
-  .comment-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 5px;
-  }
-  
-  .comment-actions button {
-    font-family: "Karla", sans-serif;
-    background: none;
-    border: none;
-    color: #768a96;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .comment-actions button:hover {
-    color: #dfebf6;
-  }
-  
-  /* !================================================================================================
-  *gameSection 
-  !===================================================================================================*/
-  
-  #gameSection {
-    padding: 30px;
-    margin: 20px auto;
-    background-color: #2a2a2a;
-    border-radius: 12px;
-    max-width: 800px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
-  }
-  
-  #gameSection .game-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  #gameSection .game-header h1 {
-    font-size: 28px;
-    font-family: "Montserrat", sans-serif;
-    color: #ffc107;
-  }
-  
-  #gameSection .game-header p {
-    font-size: 16px;
-    color: #aac7db;
-  }
-  
-  #gameSection .section {
-    margin-bottom: 30px;
-  }
-  
-  #gameSection .section h2 {
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
-    color: #ffc107;
-    margin-bottom: 10px;
-  }
-  
-  #gameSection .section p,
-  #gameSection .section ul,
-  #gameSection .section ol {
-    font-size: 16px;
-    color: #e0e0e0;
-  }
-  
-  #gameSection .section ul li,
-  #gameSection .section ol li {
-    margin-bottom: 10px;
-  }
-  
-  #gameSection .section.video-tutorial video {
-    display: block;
-    max-width: 100%;
-    margin: 10px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  
-  .image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
-    max-width: 600px; /* Adjust the width as needed */
-  }
-  
-  .image-container img {
-    max-width: 100%;
-    border-radius: 10px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
-  }
-  
-  .image-container .image-caption {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #e0e0e0;
-    text-align: center;
-  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-image: linear-gradient(to right, #000000, #2135ca);
+  font-family: Tahoma, "Times New Roman", Times, serif;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+.header .nav {
+  display: flex;
+  gap: 15px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.header .nav a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: #e0e0e0;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header .nav a:hover {
+  background-color: #1764a2;
+  color: #121212;
+}
+
+.header .setting img {
+  width: 20px;
+  height: 20px;
+}
+
+.header .login {
+  margin-left: 15px;
+}
+
+.header .login a {
+  font-size: 13px;
+  font-weight: bold;
+  color: #081d2f;
+  background-color: #535cc1;
+  border: 1px solid #081d2f;
+  border-radius: 20px;
+  padding: 8px 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.header .login a:hover {
+  background-color: #4078e9;
+  border-color: #1f3d7a;
+  color: #121212;
+}
+
+.header .title {
+  display: flex;
+  align-items: center;
+}
+
+.header .title a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.header .title a:hover {
+  transform: scale(1.1);
+}
+
+.header .title a:active {
+  transform: scale(1.05);
+}
+
+.header .title img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header .title span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e2f2ff;
+}
+
+.header .title a:hover img {
+  transform: scale(1.2);
+}
+
+.header .title a:hover span {
+  color: #d0e9fd;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #4078e9;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #2b2b2b;
+  color: #e0e0e0;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #4078e9;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-content button:hover {
+  background-color: #4078e9;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #e0e0e0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-content .close:hover {
+  color: #fff;
+}
+
+/* !================================================================================================
+*Side Panel 
+!===================================================================================================*/
+#sidePanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  margin-right: 3px;
+  width: 45px;
+  background-color: #575656;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+#sidePanel:hover {
+  width: 200px;
+  border: 3px solid #575656;
+}
+
+.individualSidePanel {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  border-radius: 25px;
+  margin: 0px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.individualSidePanel:hover {
+  background-color: #979695;
+}
+
+.individualSidePanel img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.sidePanelText {
+  font-family: "Karla", sans-serif;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #e0e0e0;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+#sidePanel:hover .sidePanelText {
+  opacity: 1;
+}
+
+#sidePanel:hover .individualSidePanel img {
+  transform: scale(1.2);
+}
+
+/* !================================================================================================
+*Comment Section 
+!===================================================================================================*/
+
+#commentSectionTitle {
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 120px;
+  font-size: 18px;
+  color: #44567d;
+}
+
+#commentSectionContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #44567d;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.add-comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.add-comment img.comment-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+textarea#commentInput {
+  flex: 1;
+  height: 60px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #444;
+  background-color: #44567d;
+  color: #e0e0e0;
+  resize: none;
+  font-size: 14px;
+}
+
+textarea#commentInput::placeholder {
+  color: #aac7db;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #29353c;
+  color: #aac7db;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #768a96;
+}
+
+/* Comments List */
+#comments {
+  list-style: none;
+  padding: 0;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.comment-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-user {
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  color: #29353c;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.comment-text {
+  font-family: "Karla", sans-serif;
+  margin: 5px 0;
+  color: #aac7db;
+  font-size: 14px;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: #768a96;
+  margin-left: 5px;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.comment-actions button {
+  font-family: "Karla", sans-serif;
+  background: none;
+  border: none;
+  color: #768a96;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.comment-actions button:hover {
+  color: #dfebf6;
+}
+
+/* !================================================================================================
+* Game Section
+!================================================================================================ */
+#gameSection {
+padding: 30px;
+margin: 20px auto;
+background-color: #2a2a2a;
+border-radius: 12px;
+max-width: 800px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+#gameSection .game-header {
+text-align: center;
+margin-bottom: 20px;
+}
+
+#gameSection .game-header h1 {
+font-size: 28px;
+font-family: "Montserrat", sans-serif;
+color: #ffc107;
+}
+
+#gameSection .game-header p {
+font-size: 16px;
+color: #aac7db;
+}
+
+#gameSection .section {
+margin-bottom: 30px;
+}
+
+#gameSection .section h2 {
+font-size: 30px;
+font-family: "Montserrat", sans-serif;
+color: #ffc107;
+margin-bottom: 10px;
+}
+
+#gameSection .section p,
+#gameSection .section ul,
+#gameSection .section ol {
+font-size: 16px;
+color: #e0e0e0;
+line-height: 1.8;
+}
+
+#gameSection .section strong {
+font-size: 25px;
+}
+
+#gameSection .section ul li,
+#gameSection .section ol li {
+margin-bottom: 10px;
+}
+
+#gameSection .section.video-tutorial video {
+display: block;
+max-width: 100%;
+margin: 10px auto;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* !================================================================================================
+* How to Play Section and tips section
+!================================================================================================ */
+
+.how-to-play-section,
+.tips-section {
+padding: 30px;
+margin: 20px auto;
+background-color: #2a2a2a;
+border-radius: 12px;
+max-width: 800px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.how-to-play-section .how-to-play-header,
+.tips-section .tips-header {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.how-to-play-section .how-to-play-header h1,
+.tips-section .tips-header h1 {
+font-size: 28px;
+font-family: "Montserrat", sans-serif;
+color: #ffc107;
+}
+
+.how-to-play-section .how-to-play-header p,
+.tips-section .tips-header p {
+font-size: 16px;
+color: #aac7db;
+margin: 0;
+}
+
+
+.step,
+.tip {
+background-color: #333333;
+padding: 15px;
+border-radius: 8px;
+margin-bottom: 15px;
+display: flex;
+align-items: flex-start;
+gap: 15px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.step:last-child,
+.tip:last-child {
+margin-bottom: 0;
+}
+
+.step-icon,
+.tip-icon {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background-color: #ffc107;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #2a2a2a;
+font-size: 20px;
+font-weight: bold;
+flex-shrink: 0;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.step-content,
+.tip-content {
+flex: 1;
+}
+
+.step-title,
+.tip-title {
+font-family: "Montserrat", sans-serif;
+font-size: 18px;
+font-weight: bold;
+color: #ffc107;
+margin-bottom: 8px;
+}
+
+.step-description,
+.tip-description {
+font-family: "Karla", sans-serif;
+font-size: 16px;
+color: #e0e0e0;
+line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+.how-to-play-section .step,
+.tips-section .tip {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step-icon,
+.tip-icon {
+  margin-bottom: 10px;
+}
+}
+
+
+
+.image-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 20px auto;
+max-width: 600px;
+}
+
+.image-container img {
+max-width: 100%;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.image-container .image-caption {
+margin-top: 10px;
+font-size: 14px;
+color: #e0e0e0;
+text-align: center;
+}
