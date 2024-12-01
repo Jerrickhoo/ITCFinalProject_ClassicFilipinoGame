@@ -406,84 +406,193 @@
     color: #dfebf6;
   }
   
-  /* !================================================================================================
-  *gameSection 
-  !===================================================================================================*/
-  
-  #gameSection {
-    padding: 30px;
-    margin: 20px auto;
-    background-color: #2a2a2a;
-    border-radius: 12px;
-    max-width: 800px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
-  }
-  
-  #gameSection .game-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  #gameSection .game-header h1 {
-    font-size: 28px;
-    font-family: "Montserrat", sans-serif;
-    color: #ffc107;
-  }
-  
-  #gameSection .game-header p {
-    font-size: 16px;
-    color: #aac7db;
-  }
-  
-  #gameSection .section {
-    margin-bottom: 30px;
-  }
-  
-  #gameSection .section h2 {
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
-    color: #ffc107;
-    margin-bottom: 10px;
-  }
-  
-  #gameSection .section p,
-  #gameSection .section ul,
-  #gameSection .section ol {
-    font-size: 16px;
-    color: #e0e0e0;
-  }
-  
-  #gameSection .section ul li,
-  #gameSection .section ol li {
-    margin-bottom: 10px;
-  }
-  
-  #gameSection .section.video-tutorial video {
-    display: block;
-    max-width: 100%;
-    margin: 10px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  
-  .image-container {
-    display: flex;
+ /* !================================================================================================
+ * Game Section
+ !================================================================================================ */
+#gameSection {
+  padding: 30px;
+  margin: 20px auto;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+#gameSection .game-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#gameSection .game-header h1 {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffc107;
+}
+
+#gameSection .game-header p {
+  font-size: 16px;
+  color: #aac7db;
+}
+
+#gameSection .section {
+  margin-bottom: 30px;
+}
+
+#gameSection .section h2 {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+#gameSection .section p,
+#gameSection .section ul,
+#gameSection .section ol {
+  font-size: 16px;
+  color: #e0e0e0;
+  line-height: 1.8;
+}
+
+#gameSection .section strong {
+  font-size: 25px;
+}
+
+#gameSection .section ul li,
+#gameSection .section ol li {
+  margin-bottom: 10px;
+}
+
+#gameSection .section.video-tutorial video {
+  display: block;
+  max-width: 100%;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* !================================================================================================
+ * How to Play Section and tips section
+ !================================================================================================ */
+ 
+ .how-to-play-section,
+.tips-section {
+  padding: 30px;
+  margin: 20px auto;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.how-to-play-section .how-to-play-header,
+.tips-section .tips-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.how-to-play-section .how-to-play-header h1,
+.tips-section .tips-header h1 {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffc107;
+}
+
+.how-to-play-section .how-to-play-header p,
+.tips-section .tips-header p {
+  font-size: 16px;
+  color: #aac7db;
+  margin: 0;
+}
+
+
+.step,
+.tip {
+  background-color: #333333;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.step:last-child,
+.tip:last-child {
+  margin-bottom: 0;
+}
+
+.step-icon,
+.tip-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffc107;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2a2a2a;
+  font-size: 20px;
+  font-weight: bold;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.step-content,
+.tip-content {
+  flex: 1;
+}
+
+.step-title,
+.tip-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffc107;
+  margin-bottom: 8px;
+}
+
+.step-description,
+.tip-description {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .how-to-play-section .step,
+  .tips-section .tip {
     flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
-    max-width: 600px; /* Adjust the width as needed */
+    align-items: flex-start;
   }
-  
-  .image-container img {
-    max-width: 100%;
-    border-radius: 10px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+
+  .step-icon,
+  .tip-icon {
+    margin-bottom: 10px;
   }
-  
-  .image-container .image-caption {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #e0e0e0;
-    text-align: center;
-  }
+}
+
+
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.image-container .image-caption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #e0e0e0;
+  text-align: center;
+}
