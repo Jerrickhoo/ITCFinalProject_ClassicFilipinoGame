@@ -138,7 +138,7 @@ header,
   color: #d0e9fd;
 }
 /* !================================================================================================
-*Intro VIdeo 
+*Login Modal 
 !===================================================================================================*/
 
 .modal {
@@ -210,6 +210,20 @@ header,
 
 .modal-content .close:hover {
   color: #fff;
+}
+
+.modal-content #googleSignIn {
+  margin: 20px 0;
+}
+
+.modal-content hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+
+.modal-content p {
+  font-size: 14px;
 }
 
 /* !================================================================================================
@@ -305,11 +319,10 @@ header,
 }
 
 #gameSection a:active {
-  color: #e0e0e0; 
-  background-color: transparent; 
-  text-decoration: none; 
+  color: #e0e0e0;
+  background-color: transparent;
+  text-decoration: none;
 }
-
 
 #gameSectioncontainer {
   background-color: #1e1e1e;

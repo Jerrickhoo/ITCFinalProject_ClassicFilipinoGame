@@ -59,26 +59,54 @@ function dislikeComment(button) {
 //!=====================================================================================================================================================
 //* loginModal
 //!=====================================================================================================================================================
+// Modal Controls
 function openLoginModal() {
-  const modal = document.getElementById("loginModal");
-  modal.style.display = "flex";
+  document.getElementById("loginModal").style.display = "flex";
 }
 
 function closeLoginModal() {
-  const modal = document.getElementById("loginModal");
-  modal.style.display = "none";
+  document.getElementById("loginModal").style.display = "none";
 }
 
-function processLogin(event) {
-  event.preventDefault();
+function openSignUpModal() {
+  closeLoginModal();
+  document.getElementById("signUpModal").style.display = "flex";
+}
 
+function closeSignUpModal() {
+  document.getElementById("signUpModal").style.display = "none";
+}
+
+// Handle Login Form
+document.getElementById("loginForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const email = document.getElementById("email").value;
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  if (username === "admin" && password === "password") {
-    alert("Login successful!");
-    closeLoginModal();
-  } else {
-    alert("Invalid username or password!");
-  }
-}
+  const response = await fetch("auth.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ action: "login", email, username, password }),
+  });
+  const data = await response.json();
+  alert(data.message);
+  if (data.status === "success") closeLoginModal();
+});
+
+// Handle Sign-Up Form
+document.getElementById("signUpForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const email = document.getElementById("signUpEmail").value;
+  const username = document.getElementById("newUsername").value;
+  const password = document.getElementById("newPassword").value;
+
+  const response = await fetch("auth.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ action: "signup", email, username, password }),
+  });
+  const data = await response.json();
+  alert(data.message);
+  if (data.status === "success") closeSignUpModal();
+});

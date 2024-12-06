@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomePage</title>
     <link rel="stylesheet" href="HomePage.css" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="scripts.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Karla:wght@400;700&display=swap"
       rel="stylesheet"
@@ -54,11 +56,15 @@
       <!--*loginModal-->
       <!--!=====================================================================================================================================================-->
 
+      <!-- Login Modal -->
       <div id="loginModal" class="modal">
         <div class="modal-content">
           <span class="close" onclick="closeLoginModal()">&times;</span>
           <h2>Login</h2>
-          <form id="loginForm" onsubmit="processLogin(event)">
+          <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required />
 
@@ -66,6 +72,30 @@
             <input type="password" id="password" name="password" required />
 
             <button type="submit">Login</button>
+          </form>
+          <p>
+            Don't have an account?
+            <a href="#" onclick="openSignUpModal()">Sign Up</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Sign-Up Modal -->
+      <div id="signUpModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeSignUpModal()">&times;</span>
+          <h2>Sign Up</h2>
+          <form id="signUpForm">
+            <label for="signUpEmail">Email</label>
+            <input type="email" id="signUpEmail" name="email" required />
+
+            <label for="newUsername">Username</label>
+            <input type="text" id="newUsername" name="username" required />
+
+            <label for="newPassword">Password</label>
+            <input type="password" id="newPassword" name="password" required />
+
+            <button type="submit">Sign Up</button>
           </form>
         </div>
       </div>
@@ -111,7 +141,6 @@
         <h3 id="gameSectionTitle">GAME SECTION</h3>
 
         <div id="gameSection">
-          
           <div class="individualGameSection">
             <!--?Luksongbaka===================================================-->
             <a
@@ -184,7 +213,9 @@
 
           <div class="individualGameSection">
             <!--?Sekyu===================================================-->
-            <a href="http://127.0.0.1:5500/GameSection/SekyuBase/SekyuBase.html">
+            <a
+              href="http://127.0.0.1:5500/GameSection/SekyuBase/SekyuBase.html"
+            >
               <div class="logo">
                 <img src="Picture/SenkyuBaseImg.png" />
               </div>
@@ -206,24 +237,26 @@
 
           <div class="individualGameSection">
             <!--?Patintero===================================================-->
-            <a href="http://127.0.0.1:5500/GameSection/Patintero/Patintero.html">
-            <div class="logo">
-              <img src="Picture/PatinteroImg.png" />
-            </div>
-            <div class="gameContent">
-              <h3>Patintero</h3>
-              <p class="summary">(4-10 Players)</p>
-              <p class="summary">
-                Teams try to cross a grid while avoiding guards who tag along
-                the lines.
-              </p>
-              <p class="moreText">
-                A strategic team game where players attempt to cross lines
-                guarded by opponents who try to tag them, requiring agility and
-                quick thinking.
-              </p>
-            </div>
-          </a>
+            <a
+              href="http://127.0.0.1:5500/GameSection/Patintero/Patintero.html"
+            >
+              <div class="logo">
+                <img src="Picture/PatinteroImg.png" />
+              </div>
+              <div class="gameContent">
+                <h3>Patintero</h3>
+                <p class="summary">(4-10 Players)</p>
+                <p class="summary">
+                  Teams try to cross a grid while avoiding guards who tag along
+                  the lines.
+                </p>
+                <p class="moreText">
+                  A strategic team game where players attempt to cross lines
+                  guarded by opponents who try to tag them, requiring agility
+                  and quick thinking.
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -248,60 +281,71 @@
       <script src="HomePage.js"></script>
     </div>
 
-<!-- Footer Section -->
-<footer style="background-color: #333; color: #fff; padding: 20px; text-align: center; position: relative; width: 100%; margin-top: auto;">
+    <!-- Footer Section -->
+    <footer
+      style="
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        margin-top: auto;
+      "
+    >
+      <!-- Site Name -->
+      <div style="font-size: 24px; font-weight: bold; margin-bottom: 15px">
+        ClassicFilipinoGames
+      </div>
 
-  <!-- Site Name -->
-  <div style="font-size: 24px; font-weight: bold; margin-bottom: 15px;">ClassicFilipinoGames</div>
+      <!-- Creator Information -->
+      <div style="margin-bottom: 15px">
+        <p>Created by:</p>
+        <p style="margin: 5px 0">Justin Jerrickho Amaguin</p>
+        <p style="margin: 5px 0">Joseph Angelo Japitana</p>
+        <p style="margin: 5px 0">Kurt David Dayao</p>
+        <p style="margin: 5px 0">Jesse Antoine G. Tacluyan</p>
+      </div>
 
-  <!-- Creator Information -->
-  <div style="margin-bottom: 15px;">
-    <p>Created by:</p>
-    <p style="margin: 5px 0;">Justin Jerrickho Amaguin</p>
-    <p style="margin: 5px 0;">Joseph Angelo Japitana</p>
-    <p style="margin: 5px 0;">Kurt David Dayao</p>
-    <p style="margin: 5px 0;">Jesse Antoine G. Tacluyan</p>
-  </div>
+      <!-- Copyright Information -->
+      <div>
+        <p>&copy; 2024 ClassicFilipinoGames. All rights reserved.</p>
+      </div>
+    </footer>
 
-  <!-- Copyright Information -->
-  <div>
-    <p>&copy; 2024 ClassicFilipinoGames. All rights reserved.</p>
-  </div>
-</footer>
+    <!-- CSS to make sure the footer stays at the bottom -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: "Arial", sans-serif;
+      }
 
-<!-- CSS to make sure the footer stays at the bottom -->
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif;
-  }
+      .main-content {
+        flex-grow: 1;
+      }
 
-  .main-content {
-    flex-grow: 1;
-  }
+      footer {
+        clear: both;
+        position: relative;
+        margin-top: auto;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+      }
 
-  footer {
-    clear: both;
-    position: relative;
-    margin-top: auto;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-  }
+      footer p {
+        margin: 5px 0;
+      }
 
-  footer p {
-    margin: 5px 0;
-  }
-
-  footer div {
-    margin-bottom: 10px;
-  }
-</style>
-<!-- END OF FOOTER uwu-->
-
+      footer div {
+        margin-bottom: 10px;
+      }
+    </style>
+    <!-- END OF FOOTER uwu-->
   </body>
 </html>
