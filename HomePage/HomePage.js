@@ -16,7 +16,7 @@ function addComment() {
 
   const avatar = document.createElement("img");
   avatar.className = "comment-avatar";
-  avatar.src = "default-avatar.png"; 
+  avatar.src = "default-avatar.png";
   avatar.alt = "Avatar";
   comment.appendChild(avatar);
 
@@ -59,54 +59,3 @@ function dislikeComment(button) {
 //!=====================================================================================================================================================
 //* loginModal
 //!=====================================================================================================================================================
-// Modal Controls
-function openLoginModal() {
-  document.getElementById("loginModal").style.display = "flex";
-}
-
-function closeLoginModal() {
-  document.getElementById("loginModal").style.display = "none";
-}
-
-function openSignUpModal() {
-  closeLoginModal();
-  document.getElementById("signUpModal").style.display = "flex";
-}
-
-function closeSignUpModal() {
-  document.getElementById("signUpModal").style.display = "none";
-}
-
-// Handle Login Form
-document.getElementById("loginForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const email = document.getElementById("email").value;
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-
-  const response = await fetch("auth.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ action: "login", email, username, password }),
-  });
-  const data = await response.json();
-  alert(data.message);
-  if (data.status === "success") closeLoginModal();
-});
-
-// Handle Sign-Up Form
-document.getElementById("signUpForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const email = document.getElementById("signUpEmail").value;
-  const username = document.getElementById("newUsername").value;
-  const password = document.getElementById("newPassword").value;
-
-  const response = await fetch("auth.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ action: "signup", email, username, password }),
-  });
-  const data = await response.json();
-  alert(data.message);
-  if (data.status === "success") closeSignUpModal();
-});
