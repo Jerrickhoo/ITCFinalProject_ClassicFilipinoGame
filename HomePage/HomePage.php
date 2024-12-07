@@ -28,7 +28,7 @@ include("connect.php");
 
     <header class="header">
       <div class="title">
-        <a href="http://127.0.0.1:5500/HomePage/HomePage/HomePage.html">
+        <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/HomePage/HomePage.php">
           <img src="Picture/logoPlaceholder.png" />
           <span>LaroKultura</span>
         </a>
@@ -92,7 +92,7 @@ include("connect.php");
       <div id="gameSection">
         <div class="individualGameSection">
           <!--?Luksongbaka===================================================-->
-          <a href="http://127.0.0.1:5500/GameSection/LuksongBaka/LuksongBaka.html">
+          <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/GameSection/Luksongbaka/Luksongbaka.html">
             <div class="logo">
               <img src="Picture/LuksongBakaImg.png" />
             </div>
@@ -114,7 +114,7 @@ include("connect.php");
 
         <div class="individualGameSection">
           <!--?Langit Lupa===================================================-->
-          <a href="http://127.0.0.1:5500/GameSection/LangitLupa/LangitLupa.html">
+          <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/GameSection/LangitLupa/LangitLupa.html">
             <div class="logo">
               <img src="Picture/LangitLupaImg.png" />
             </div>
@@ -136,7 +136,7 @@ include("connect.php");
 
         <div class="individualGameSection">
           <!--?Bente Uno===================================================-->
-          <a href="http://127.0.0.1:5500/GameSection/BenteUno/BenteUno.html">
+          <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/GameSection/BenteUno/BenteUno.html">
             <div class="logo">
               <img src="Picture/BenteUnoImg.png" />
             </div>
@@ -158,7 +158,7 @@ include("connect.php");
 
         <div class="individualGameSection">
           <!--?Sekyu===================================================-->
-          <a href="http://127.0.0.1:5500/GameSection/SekyuBase/SekyuBase.html">
+          <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/GameSection/SekyuBase/SekyuBase.html">
             <div class="logo">
               <img src="Picture/SenkyuBaseImg.png" />
             </div>
@@ -180,7 +180,7 @@ include("connect.php");
 
         <div class="individualGameSection">
           <!--?Patintero===================================================-->
-          <a href="http://127.0.0.1:5500/GameSection/Patintero/Patintero.html">
+          <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/GameSection/Patintero/Patintero.html">
             <div class="logo">
               <img src="Picture/PatinteroImg.png" />
             </div>
@@ -216,73 +216,38 @@ include("connect.php");
       <ul id="comments"></ul>
     </div>
 
-    <script src="HomePage.js"></script>
+    <!--!=====================================================================================================================================================-->
+    <!--*Footer Section-->
+    <!--!=====================================================================================================================================================-->
+
+    <!-- Footer Section -->
+    <footer>
+      <!-- Site Name -->
+      <div class="site-name">
+        ClassicFilipinoGames
+      </div>
+
+      <!-- Creator Information -->
+      <div class="creator-info">
+        <p>Created by:</p>
+        <p>Justin Jerrickho Amaguin</p>
+        <p>Joseph Angelo Japitana</p>
+        <p>Kurt David Dayao</p>
+        <p>Jesse Antoine G. Tacluyan</p>
+      </div>
+
+      <!-- Copyright Information -->
+      <div class="copyright">
+        <p>&copy; 2024 ClassicFilipinoGames. All rights reserved.</p>
+      </div>
+    </footer>
+
   </div>
 
-  <!-- Footer Section -->
-  <footer style="
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        position: relative;
-        width: 100%;
-        margin-top: auto;
-      ">
-    <!-- Site Name -->
-    <div style="font-size: 24px; font-weight: bold; margin-bottom: 15px">
-      ClassicFilipinoGames
-    </div>
 
-    <!-- Creator Information -->
-    <div style="margin-bottom: 15px">
-      <p>Created by:</p>
-      <p style="margin: 5px 0">Justin Jerrickho Amaguin</p>
-      <p style="margin: 5px 0">Joseph Angelo Japitana</p>
-      <p style="margin: 5px 0">Kurt David Dayao</p>
-      <p style="margin: 5px 0">Jesse Antoine G. Tacluyan</p>
-    </div>
 
-    <!-- Copyright Information -->
-    <div>
-      <p>&copy; 2024 ClassicFilipinoGames. All rights reserved.</p>
-    </div>
-  </footer>
+  <script src="HomePage.js"></script>
 
-  <!-- CSS to make sure the footer stays at the bottom -->
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      font-family: "Arial", sans-serif;
-    }
-
-    .main-content {
-      flex-grow: 1;
-    }
-
-    footer {
-      clear: both;
-      position: relative;
-      margin-top: auto;
-      width: 100%;
-      background-color: #333;
-      color: #fff;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-
-    footer div {
-      margin-bottom: 10px;
-    }
-  </style>
-  <!-- END OF FOOTER uwu-->
 </body>
 
 </html>

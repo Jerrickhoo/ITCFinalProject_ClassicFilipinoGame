@@ -91,4 +91,61 @@
     text-decoration: underline;
     color: #1e88e5;
   }
-  
+  /* Base modal styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  animation: fadeIn 0.4s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Centering the modal content */
+.modal-content {
+  position: relative;
+  background-color: #1e1e1e; /* Match the theme */
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  max-width: 400px;
+  width: 90%; /* Make it responsive */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 10% auto; /* Center modal vertically and horizontally */
+}
+
+/* Close button styling */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+  padding: 5px; /* Padding for better clickability */
+}
+
+.close:hover,
+.close:focus {
+  color: #ff6f61; /* Hover effect */
+  transform: scale(1.2); /* Zoom-in effect */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

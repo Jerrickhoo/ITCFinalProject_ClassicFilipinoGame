@@ -1,3 +1,11 @@
+<?php
+session_start();
+$errorMessage = "";
+if (isset($_SESSION['error'])) {
+    $errorMessage = $_SESSION['error'];
+    unset($_SESSION['error']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +60,14 @@
         <button type="submit" class="btn" name="signIn">Login</button>
       </form>
       <p>Don't have an account? <button class="switch-button" onclick="showRegister()">Sign Up</button></p>
+    </div>
+  </div>
+
+  <!-- Popup for Error Messages -->
+  <div id="errorPopup" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeErrorModal()">&times;</span>
+      <p id="errorMessage"><?php echo $errorMessage; ?></p>
     </div>
   </div>
 
