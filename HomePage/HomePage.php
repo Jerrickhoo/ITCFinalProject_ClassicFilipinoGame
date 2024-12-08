@@ -13,7 +13,6 @@ include("connect.php");
   <title>HomePage</title>
   <link rel="stylesheet" href="HomePage.css" />
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <script src="scripts.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Karla:wght@400;700&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
@@ -44,11 +43,31 @@ include("connect.php");
       </div>
 
       <div class="setting">
-        <a href="#"><img src="Picture/gear-solid.svg" alt="Settings" /></a>
-      </div>
+        <!-- Hidden checkbox for toggle -->
+        <input type="checkbox" id="settingsToggle" class="settings-checkbox" />
+        <!-- Label acts as the button -->
+        <label for="settingsToggle" class="setting-btn">⚙️</label>
+        <!-- Menu -->
+        <div class="settings-menu">
+          <div class="user-info">
+            <?php if (isset($_SESSION['email'])): ?>
+              <?php
+              $email = $_SESSION['email'];
+              $query = "SELECT firstName, lastName FROM users WHERE email = '$email'";
+              $result = $conn->query($query);
 
-      <div class="login">
-        <a href="#" onclick="openLoginModal()">Login</a>
+              if ($result->num_rows > 0) {
+                $user = $result->fetch_assoc();
+                $userName = $user['firstName'] . ' ' . $user['lastName'];
+                echo "<span>Welcome, $userName</span>";
+              }
+              ?>
+              <a href="logout.php" class="logout-btn">Logout</a>
+            <?php else: ?>
+              <a href="login.php" class="login-btn">Login</a>
+            <?php endif; ?>
+          </div>
+        </div>
       </div>
     </header>
 
