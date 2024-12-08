@@ -36,7 +36,14 @@ if (isset($_POST['signIn'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
+        // Fetch user data
+        $user = $result->fetch_assoc();
+
+        // Set session variables
         $_SESSION['email'] = $email;
+        $_SESSION['firstName'] = $user['firstName'];
+        $_SESSION['lastName'] = $user['lastName'];
+
         header("Location: HomePage.php");
         exit();
     } else {

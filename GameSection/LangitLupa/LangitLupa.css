@@ -123,9 +123,8 @@ header,
 }
 
 .header .title img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  max-width: 55px;
+  margin: 0px;
 }
 
 .header .title span {

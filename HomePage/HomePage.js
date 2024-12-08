@@ -14,12 +14,6 @@ function addComment() {
   const comment = document.createElement("li");
   comment.className = "comment";
 
-  const avatar = document.createElement("img");
-  avatar.className = "comment-avatar";
-  avatar.src = "default-avatar.png";
-  avatar.alt = "Avatar";
-  comment.appendChild(avatar);
-
   const content = document.createElement("div");
   content.className = "comment-content";
 

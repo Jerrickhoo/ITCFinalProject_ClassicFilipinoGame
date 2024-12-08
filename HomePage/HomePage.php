@@ -28,7 +28,7 @@ include("connect.php");
     <header class="header">
       <div class="title">
         <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/HomePage/HomePage.php">
-          <img src="Picture/logoPlaceholder.png" />
+          <img src="Picture/ICONFORWEBSITE.png" />
           <span>LaroKultura</span>
         </a>
       </div>
@@ -58,8 +58,10 @@ include("connect.php");
 
               if ($result->num_rows > 0) {
                 $user = $result->fetch_assoc();
-                $userName = $user['firstName'] . ' ' . $user['lastName'];
-                echo "<span>Welcome, $userName</span>";
+                $userName = isset($_SESSION['firstName'], $_SESSION['lastName'])
+                  ? $_SESSION['firstName'] . ' ' . $_SESSION['lastName']
+                  : "Guest";
+                echo "<p class='welcome-text'>Welcome, <strong>$userName</strong></p>";
               }
               ?>
               <a href="logout.php" class="logout-btn">Logout</a>
@@ -225,15 +227,38 @@ include("connect.php");
     <!--*Comment Section-->
     <!--!=====================================================================================================================================================-->
 
-    <h3 id="commentSectionTitle">COMMENT SECTION</h3>
-    <div id="commentSectionContainer">
+    <form id="addCommentForm" action="add_comment.php" method="POST">
       <div class="add-comment">
-        <img class="comment-avatar" src="default-avatar.png" alt="Avatar" />
-        <textarea id="commentInput" placeholder="Add a public comment..."></textarea>
-        <button onclick="addComment()">Comment</button>
+        <?php if (isset($_SESSION['firstName'], $_SESSION['lastName'])): ?>
+          <textarea id="commentInput" name="comment"
+            placeholder="Add a comment as <?php echo htmlspecialchars($_SESSION['firstName'] . ' ' . $_SESSION['lastName']); ?>..."
+            required></textarea>
+        <?php else: ?>
+          <textarea id="commentInput" name="comment" placeholder="Add a public comment..." required></textarea>
+        <?php endif; ?>
+        <button type="submit">Comment</button>
       </div>
-      <ul id="comments"></ul>
-    </div>
+    </form>
+
+
+    <ul id="comments">
+      <?php
+      $query = "SELECT * FROM comments ORDER BY created_at DESC";
+      $result = $conn->query($query);
+
+      while ($row = $result->fetch_assoc()) {
+        echo "<li class='comment'>
+          <div class='comment-content'>
+            <div>
+              <span class='comment-user'>{$row['USER']}</span>
+              <span class='comment-time'>{$row['created_at']}</span>
+            </div>
+            <p class='comment-text'>{$row['content']}</p>
+          </div>
+        </li>";
+      }
+      ?>
+    </ul>
 
     <!--!=====================================================================================================================================================-->
     <!--*Footer Section-->
