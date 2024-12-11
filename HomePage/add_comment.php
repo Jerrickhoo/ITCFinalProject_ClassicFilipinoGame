@@ -4,19 +4,18 @@ include("connect.php");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['comment'])) {
     $comment = $conn->real_escape_string($_POST['comment']);
-    
-    // Fetch user name from session
-    $userName = isset($_SESSION['firstName'], $_SESSION['lastName'])
-        ? $conn->real_escape_string($_SESSION['firstName'] . ' ' . $_SESSION['lastName'])
-        : "Guest";
+    $user_id = $_SESSION['user_id']; // Assuming the user ID is stored in session after login
 
-    // Insert into comments table
-    $query = "INSERT INTO comments (user, content) VALUES ('$userName', '$comment')";
+    if (empty($user_id)) {
+        die(json_encode(["success" => false, "message" => "User ID not set in session. Please log in again."]));
+    }
+
+    $query = "INSERT INTO comments (user_id, content, created_at) VALUES ('$user_id', '$comment', NOW())";
     if ($conn->query($query) === TRUE) {
-        header("Location: HomePage.php");
+        header("Location: HomePage.php"); // Redirect back to the homepage
         exit();
     } else {
-        echo "Error: " . $conn->error;
+        echo json_encode(["success" => false, "message" => "Failed to add comment."]);
     }
 }
 ?>

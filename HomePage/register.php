@@ -32,7 +32,7 @@ if (isset($_POST['signIn'])) {
     $email = $_POST['email'];
     $password = md5($_POST['password']);
 
-    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $sql = "SELECT Id, firstName, lastName, email FROM users WHERE email='$email' AND password='$password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -40,9 +40,11 @@ if (isset($_POST['signIn'])) {
         $user = $result->fetch_assoc();
 
         // Set session variables
-        $_SESSION['email'] = $email;
+        $_SESSION['email'] = $user['email'];
         $_SESSION['firstName'] = $user['firstName'];
         $_SESSION['lastName'] = $user['lastName'];
+        $_SESSION['user_id'] = $user['Id']; // Assign the user's ID from the database after successful login
+
 
         header("Location: HomePage.php");
         exit();
@@ -52,4 +54,21 @@ if (isset($_POST['signIn'])) {
         exit();
     }
 }
+
+
+if ($result->num_rows > 0) {
+    // Fetch user data
+    $user = $result->fetch_assoc();
+
+    // Set session variables
+    $_SESSION['user_id'] = $user['Id']; // Add user ID to session
+    $_SESSION['email'] = $email;
+    $_SESSION['firstName'] = $user['firstName'];
+    $_SESSION['lastName'] = $user['lastName'];
+
+    header("Location: HomePage.php");
+    exit();
+}
+
+
 ?>

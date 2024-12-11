@@ -23,7 +23,6 @@ body {
 
 header,
 #gameSection,
-#sidePanel,
 #introVideo,
 #commentSection {
   max-width: 100%;
@@ -227,68 +226,6 @@ header,
   margin: 20px 20px 40px;
 }
 
-/* !================================================================================================
-*Side Panel 
-!===================================================================================================*/
-#sidePanel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 10px;
-  margin-right: 3px;
-  width: 45px;
-  background-color: #575656;
-  border-radius: 25px;
-  overflow: hidden;
-  transition: width 0.3s ease;
-}
-
-#sidePanel:hover {
-  width: 200px;
-  border: 3px solid #575656;
-}
-
-.individualSidePanel {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  width: 100%;
-  border-radius: 25px;
-  margin: 0px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.individualSidePanel:hover {
-  background-color: #979695;
-}
-
-.individualSidePanel img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.2s ease;
-}
-
-.sidePanelText {
-  font-family: "Karla", sans-serif;
-  margin-left: 10px;
-  font-size: 14px;
-  color: #e0e0e0;
-  opacity: 0;
-  white-space: nowrap;
-  transition: opacity 0.3s ease;
-}
-
-#sidePanel:hover .sidePanelText {
-  opacity: 1;
-}
-
-#sidePanel:hover .individualSidePanel img {
-  transform: scale(1.2);
-}
 
 /* !================================================================================================
 *Game section 
@@ -401,60 +338,73 @@ header,
 *Comment Section 
 !===================================================================================================*/
 
-#commentSectionTitle {
-  font-family: "Montserrat", sans-serif;
-  text-align: left;
-  margin-top: 20px;
-  margin-left: 120px;
-  font-size: 18px;
-  color: #44567d;
-}
-
+/* Comment Section Container */
 #commentSectionContainer {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #44567d;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: #2e3a47;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
 }
 
+/* Section Title */
+#commentSectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 3px solid #768a96;
+  padding-bottom: 10px;
+}
+
+/* Add Comment Form */
 .add-comment {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
   margin-bottom: 20px;
-  gap: 10px;
 }
 
 textarea#commentInput {
-  flex: 1;
-  height: 60px;
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
   border-radius: 8px;
-  padding: 10px;
-  border: 1px solid #444;
-  background-color: #44567d;
+  border: 1px solid #768a96;
+  background-color: #1e2a34;
   color: #e0e0e0;
+  font-size: 15px;
+  font-family: "Karla", sans-serif;
   resize: none;
-  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
 }
 
 textarea#commentInput::placeholder {
-  color: #aac7db;
+  color: #768a96;
+  opacity: 0.7;
 }
 
-button {
-  margin-top: 10px;
-  padding: 8px 15px;
-  background-color: #29353c;
-  color: #aac7db;
+/* Submit Button */
+button[type="submit"] {
+  align-self: flex-end;
+  padding: 12px 25px;
+  background-color: #44567d;
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
-  font-size: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #768a96;
+button[type="submit"]:hover {
+  background-color: #576b8d;
+  transform: scale(1.05);
 }
 
 /* Comments List */
@@ -463,62 +413,71 @@ button:hover {
   padding: 0;
 }
 
+/* Individual Comment */
 .comment {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  padding: 15px;
   margin-bottom: 20px;
+  background-color: #3c4956;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   gap: 10px;
 }
 
-.comment-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.comment-content {
-  flex: 1;
+/* Comment Header */
+.comment-content > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .comment-user {
   font-family: "Karla", sans-serif;
   font-weight: bold;
-  color: #29353c;
-  margin-right: 10px;
-  font-size: 14px;
-}
-
-.comment-text {
-  font-family: "Karla", sans-serif;
-  margin: 5px 0;
-  color: #aac7db;
-  font-size: 14px;
+  color: #ffffff;
+  font-size: 15px;
 }
 
 .comment-time {
-  font-size: 12px;
+  font-size: 13px;
+  font-family: "Karla", sans-serif;
   color: #768a96;
-  margin-left: 5px;
 }
 
+/* Comment Text */
+.comment-text {
+  font-family: "Karla", sans-serif;
+  font-size: 14px;
+  color: #dfe5ea;
+  line-height: 1.6;
+}
+
+/* Comment Actions */
 .comment-actions {
   display: flex;
+  justify-content: space-between; /* Align buttons to the left and right */
   align-items: center;
-  gap: 15px;
   margin-top: 5px;
 }
 
+/* Wrapper for Edit and Delete buttons */
+.comment-edit-delete {
+  display: flex;
+  gap: 10px; /* Add some space between the buttons */
+}
+
 .comment-actions button {
-  font-family: "Karla", sans-serif;
-  background: none;
+  background-color: transparent;
+  color: #aac7db;
   border: none;
-  color: #768a96;
-  cursor: pointer;
   font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .comment-actions button:hover {
-  color: #dfebf6;
+  color: #ffffff;
 }
 
 

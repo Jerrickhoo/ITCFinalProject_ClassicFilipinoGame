@@ -1,3 +1,8 @@
+<?php
+session_start();
+include("connect.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,26 +40,36 @@
           <a href="#">Gallery</a>
           <a href="#">Contact</a>
         </div>
-        <div class="login">
-          <a href="#" onclick="openLoginModal()">Login</a>
-        </div>
-      </header>
+        <div class="setting">
+        <!-- Hidden checkbox for toggle -->
+        <input type="checkbox" id="settingsToggle" class="settings-checkbox" />
+        <!-- Label acts as the button -->
+        <label for="settingsToggle" class="setting-btn">⚙️</label>
+        <!-- Menu -->
+        <div class="settings-menu">
+          <div class="user-info">
+            <?php if (isset($_SESSION['email'])): ?>
+              <?php
+              $email = $_SESSION['email'];
+              $query = "SELECT firstName, lastName FROM users WHERE email = '$email'";
+              $result = $conn->query($query);
 
-      <!-- Sidebar -->
-      <div id="sidePanel">
-        <div class="individualSidePanel">
-          <img src="Picture/bx-question-mark.svg" />
-          <span class="sidePanelText">What's New?</span>
-        </div>
-        <div class="individualSidePanel">
-          <img src="Picture/bx-alarm-exclamation.svg" />
-          <span class="sidePanelText">Latest Alerts</span>
-        </div>
-        <div class="individualSidePanel">
-          <img src="Picture/bx-group.svg" />
-          <span class="sidePanelText">Community</span>
+              if ($result->num_rows > 0) {
+                $user = $result->fetch_assoc();
+                $userName = isset($_SESSION['firstName'], $_SESSION['lastName'])
+                  ? $_SESSION['firstName'] . ' ' . $_SESSION['lastName']
+                  : "Guest";
+                echo "<p class='welcome-text'>Welcome, <strong>$userName</strong></p>";
+              }
+              ?>
+              <a href="\ITCFinalProject_ClassicFilipinoGame\HomePage\logout.php" class="logout-btn">Logout</a>
+            <?php else: ?>
+              <a href="\ITCFinalProject_ClassicFilipinoGame\HomePage\login.php" class="login-btn">Login</a>
+            <?php endif; ?>
+          </div>
         </div>
       </div>
+      </header>
 
       <!-- Game Section -->
       <section id="gameSection">

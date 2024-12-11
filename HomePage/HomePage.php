@@ -1,7 +1,10 @@
 <?php
 session_start();
 include("connect.php");
+
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -34,12 +37,10 @@ include("connect.php");
       </div>
 
       <div class="nav">
-        <a href="#">Game Info</a>
         <a href="#">Media</a>
-        <a href="#">*****</a>
-        <a href="#">*******</a>
-        <a href="#">Support</a>
-        <a href="#">More</a>
+        <a href="#">About us</a>
+        <a href="#">Whats New</a>
+        <a href="#">Support Us</a>
       </div>
 
       <div class="setting">
@@ -84,24 +85,6 @@ include("connect.php");
       </video>
     </div>
 
-    <!--!=====================================================================================================================================================-->
-    <!--*Side Panel-->
-    <!--!=====================================================================================================================================================-->
-
-    <div id="sidePanel">
-      <div class="individualSidePanel">
-        <img src="Picture/bx-question-mark.svg" />
-        <span class="sidePanelText">What's New?</span>
-      </div>
-      <div class="individualSidePanel">
-        <img src="Picture/bx-alarm-exclamation.svg" />
-        <span class="sidePanelText">Latest Alerts</span>
-      </div>
-      <div class="individualSidePanel">
-        <img src="Picture/bx-group.svg" />
-        <span class="sidePanelText">Community</span>
-      </div>
-    </div>
 
     <!--!=====================================================================================================================================================-->
     <!--*gameSection-->
@@ -113,7 +96,7 @@ include("connect.php");
       <div id="gameSection">
         <div class="individualGameSection">
           <!--?Luksongbaka===================================================-->
-          <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/GameSection/Luksongbaka/Luksongbaka.html">
+          <a href="/ITCFinalProject_ClassicFilipinoGame/GameSection/Luksongbaka/Luksongbaka.php">
             <div class="logo">
               <img src="Picture/LuksongBakaImg.png" />
             </div>
@@ -135,7 +118,7 @@ include("connect.php");
 
         <div class="individualGameSection">
           <!--?Langit Lupa===================================================-->
-          <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/GameSection/LangitLupa/LangitLupa.html">
+          <a href="/ITCFinalProject_ClassicFilipinoGame/GameSection/LangitLupa/LangitLupa.php">
             <div class="logo">
               <img src="Picture/LangitLupaImg.png" />
             </div>
@@ -157,7 +140,7 @@ include("connect.php");
 
         <div class="individualGameSection">
           <!--?Bente Uno===================================================-->
-          <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/GameSection/BenteUno/BenteUno.html">
+          <a href="/ITCFinalProject_ClassicFilipinoGame/GameSection/BenteUno/BenteUno.php">
             <div class="logo">
               <img src="Picture/BenteUnoImg.png" />
             </div>
@@ -179,7 +162,7 @@ include("connect.php");
 
         <div class="individualGameSection">
           <!--?Sekyu===================================================-->
-          <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/GameSection/SekyuBase/SekyuBase.html">
+          <a href="/ITCFinalProject_ClassicFilipinoGame/GameSection/SekyuBase/SekyuBase.php">
             <div class="logo">
               <img src="Picture/SenkyuBaseImg.png" />
             </div>
@@ -201,7 +184,7 @@ include("connect.php");
 
         <div class="individualGameSection">
           <!--?Patintero===================================================-->
-          <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/GameSection/Patintero/Patintero.html">
+          <a href="/ITCFinalProject_ClassicFilipinoGame/GameSection/Patintero/Patintero.php">
             <div class="logo">
               <img src="Picture/PatinteroImg.png" />
             </div>
@@ -227,38 +210,70 @@ include("connect.php");
     <!--*Comment Section-->
     <!--!=====================================================================================================================================================-->
 
-    <form id="addCommentForm" action="add_comment.php" method="POST">
-      <div class="add-comment">
-        <?php if (isset($_SESSION['firstName'], $_SESSION['lastName'])): ?>
-          <textarea id="commentInput" name="comment"
-            placeholder="Add a comment as <?php echo htmlspecialchars($_SESSION['firstName'] . ' ' . $_SESSION['lastName']); ?>..."
-            required></textarea>
-        <?php else: ?>
-          <textarea id="commentInput" name="comment" placeholder="Add a public comment..." required></textarea>
-        <?php endif; ?>
-        <button type="submit">Comment</button>
-      </div>
-    </form>
+    <div id="commentSectionContainer">
+      <h2 id="commentSectionTitle">Comments</h2>
 
+      <!-- Add Comment Form -->
+      <form id="addCommentForm" action="add_comment.php" method="POST">
+        <div class="add-comment">
+          <?php if (isset($_SESSION['firstName'], $_SESSION['lastName'], $_SESSION['user_id'])): ?>
+            <textarea id="commentInput" name="comment"
+              placeholder="Add a comment as <?php echo htmlspecialchars($_SESSION['firstName'] . ' ' . $_SESSION['lastName']); ?>..."
+              required></textarea>
+          <?php else: ?>
+            <textarea id="commentInput" name="comment" placeholder="Add a public comment..." required></textarea>
+          <?php endif; ?>
+          <button type="submit">Comment</button>
+        </div>
+      </form>
 
-    <ul id="comments">
-      <?php
-      $query = "SELECT * FROM comments ORDER BY created_at DESC";
-      $result = $conn->query($query);
+      <!-- Display Comments -->
+      <ul id="comments">
+        <?php
+        $query = "SELECT c.id, c.user_id, c.content, c.created_at, c.likes, u.firstName, u.lastName 
+              FROM comments c 
+              JOIN users u ON c.user_id = u.Id 
+              ORDER BY c.created_at DESC";
+        $result = $conn->query($query);
 
-      while ($row = $result->fetch_assoc()) {
-        echo "<li class='comment'>
-          <div class='comment-content'>
-            <div>
-              <span class='comment-user'>{$row['USER']}</span>
-              <span class='comment-time'>{$row['created_at']}</span>
-            </div>
-            <p class='comment-text'>{$row['content']}</p>
-          </div>
-        </li>";
-      }
-      ?>
-    </ul>
+        if ($result) {
+          while ($row = $result->fetch_assoc()) {
+            $isAuthor = false;
+
+            if (isset($_SESSION['user_id'], $row['user_id']) && $_SESSION['user_id'] == $row['user_id']) {
+              $isAuthor = true;
+            }
+
+            $userName = htmlspecialchars($row['firstName'] . ' ' . $row['lastName']);
+            echo "<li class='comment' data-id='{$row['id']}' data-user-id='{$row['user_id']}'>
+                    <div class='comment-content'>
+                        <div>
+                            <span class='comment-user'>{$userName}</span>
+                            <span class='comment-time'>{$row['created_at']}</span>
+                        </div>
+                        <p class='comment-text'>{$row['content']}</p>
+                        <div class='comment-actions'>";
+
+            // Display edit and delete buttons only for the comment's author
+            if ($isAuthor) {
+              echo "<div class='comment-edit-delete'>
+                        <button onclick='editComment(this)'>Edit</button>
+                        <button onclick='deleteComment(this)'>Delete</button>
+                      </div>";
+            }
+
+            echo "<button onclick='heartComment(this)'>❤️ {$row['likes']}</button>
+                    </div>
+                </div>
+            </li>";
+          }
+        } else {
+          echo "<li>Error fetching comments. Please try again later.</li>";
+        }
+        ?>
+      </ul>
+    </div>
+
 
     <!--!=====================================================================================================================================================-->
     <!--*Footer Section-->
