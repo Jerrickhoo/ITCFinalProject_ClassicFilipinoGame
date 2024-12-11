@@ -37,10 +37,10 @@ include("connect.php");
       </div>
 
       <div class="nav">
-        <a href="/ITCFinalProject_ClassicFilipinoGame/HomePage/UNAVAILABLE.html">Media</a>
-        <a href="/ITCFinalProject_ClassicFilipinoGame/HomePage/UNAVAILABLE.html">About us</a>
-        <a href="/ITCFinalProject_ClassicFilipinoGame/HomePage/UNAVAILABLE.html">Whats New</a>
-        <a href="/ITCFinalProject_ClassicFilipinoGame/HomePage/UNAVAILABLE.html">Support Us</a>
+        <a href="/ITCFinalProject_ClassicFilipinoGame/MAINTAINANCEPAGE/UNAVAILABLE.html">Media</a>
+        <a href="/ITCFinalProject_ClassicFilipinoGame/MAINTAINANCEPAGE/UNAVAILABLE.html">About us</a>
+        <a href="/ITCFinalProject_ClassicFilipinoGame/MAINTAINANCEPAGE/UNAVAILABLE.html">Whats New</a>
+        <a href="/ITCFinalProject_ClassicFilipinoGame/MAINTAINANCEPAGE/UNAVAILABLE.html">Support Us</a>
       </div>
 
       <div class="setting">

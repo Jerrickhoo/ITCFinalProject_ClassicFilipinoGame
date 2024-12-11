@@ -34,11 +34,11 @@ include("connect.php");
           </a>
         </div>
         <div class="nav">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Games</a>
-          <a href="#">Gallery</a>
-          <a href="#">Contact</a>
+          <a href="/ITCFinalProject_ClassicFilipinoGame/MAINTAINANCEPAGE/UNAVAILABLE.html">Home</a>
+          <a href="/ITCFinalProject_ClassicFilipinoGame/MAINTAINANCEPAGE/UNAVAILABLE.html">About</a>
+          <a href="/ITCFinalProject_ClassicFilipinoGame/MAINTAINANCEPAGE/UNAVAILABLE.html">Games</a>
+          <a href="/ITCFinalProject_ClassicFilipinoGame/MAINTAINANCEPAGE/UNAVAILABLE.html">Gallery</a>
+          <a href="/ITCFinalProject_ClassicFilipinoGame/MAINTAINANCEPAGE/UNAVAILABLE.html">Contact</a>
         </div>
         <div class="setting">
         <!-- Hidden checkbox for toggle -->
