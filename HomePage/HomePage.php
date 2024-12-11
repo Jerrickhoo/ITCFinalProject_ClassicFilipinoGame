@@ -30,17 +30,17 @@ include("connect.php");
 
     <header class="header">
       <div class="title">
-        <a href="http://localhost/ITCFinalProject_ClassicFilipinoGame/HomePage/HomePage.php">
+        <a href="/ITCFinalProject_ClassicFilipinoGame/HomePage/HomePage.php">
           <img src="Picture/ICONFORWEBSITE.png" />
           <span>LaroKultura</span>
         </a>
       </div>
 
       <div class="nav">
-        <a href="#">Media</a>
-        <a href="#">About us</a>
-        <a href="#">Whats New</a>
-        <a href="#">Support Us</a>
+        <a href="/ITCFinalProject_ClassicFilipinoGame/HomePage/UNAVAILABLE.html">Media</a>
+        <a href="/ITCFinalProject_ClassicFilipinoGame/HomePage/UNAVAILABLE.html">About us</a>
+        <a href="/ITCFinalProject_ClassicFilipinoGame/HomePage/UNAVAILABLE.html">Whats New</a>
+        <a href="/ITCFinalProject_ClassicFilipinoGame/HomePage/UNAVAILABLE.html">Support Us</a>
       </div>
 
       <div class="setting">
