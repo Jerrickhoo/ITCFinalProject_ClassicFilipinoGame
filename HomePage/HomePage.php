@@ -80,7 +80,7 @@ include("connect.php");
 
     <div id="introVideo">
       <video autoplay muted loop>
-        <source src="Video/Makalimutan_Ka_Until_Then_Edit.mp4" type="video/mp4" />
+        <source src="Video/LARONG PINOY (PROMOTIONAL VIDEO).mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -205,6 +205,15 @@ include("connect.php");
         </div>
       </div>
     </div>
+
+
+    <div id="introVideo">
+      <video autoplay muted loop>
+        <source src="Video/Smile (Children of The Philippines).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
 
     <!--!=====================================================================================================================================================-->
     <!--*Comment Section-->
