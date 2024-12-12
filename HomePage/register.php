@@ -2,7 +2,7 @@
 session_start();
 include 'connect.php';
 
-if (isset($_POST['signUp'])) {
+if (isset($_POST['signUp'])){
     $firstName = $_POST['fName'];
     $lastName = $_POST['lName'];
     $email = $_POST['email'];
@@ -12,15 +12,15 @@ if (isset($_POST['signUp'])) {
     $checkEmail = "SELECT * FROM users WHERE email='$email'";
     $result = $conn->query($checkEmail);
 
-    if ($result->num_rows > 0) {
+    if ($result->num_rows > 0){
         $_SESSION['error'] = "Email Address Already Exists!";
-    } else {
+    } else{
         $insertQuery = "INSERT INTO users (firstName, lastName, email, password)
                         VALUES ('$firstName', '$lastName', '$email', '$hashedPassword')";
-        if ($conn->query($insertQuery) === TRUE) {
+        if ($conn->query($insertQuery) === TRUE){
             header("Location: login.php");
             exit();
-        } else {
+        } else{
             $_SESSION['error'] = "An error occurred: " . $conn->error;
         }
     }
@@ -28,14 +28,14 @@ if (isset($_POST['signUp'])) {
     exit();
 }
 
-if (isset($_POST['signIn'])) {
+if (isset($_POST['signIn'])){
     $email = $_POST['email'];
     $password = md5($_POST['password']);
 
     $sql = "SELECT Id, firstName, lastName, email FROM users WHERE email='$email' AND password='$password'";
     $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
+    if ($result->num_rows > 0){
         // Fetch user data
         $user = $result->fetch_assoc();
 
@@ -48,7 +48,7 @@ if (isset($_POST['signIn'])) {
 
         header("Location: HomePage.php");
         exit();
-    } else {
+    } else{
         $_SESSION['error'] = "Incorrect Email or Password!";
         header("Location: login.php");
         exit();
@@ -56,7 +56,7 @@ if (isset($_POST['signIn'])) {
 }
 
 
-if ($result->num_rows > 0) {
+if ($result->num_rows > 0){
     // Fetch user data
     $user = $result->fetch_assoc();
 

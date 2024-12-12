@@ -1,18 +1,18 @@
-* {
+*{
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
 
-body {
+body{
   display: flex;
   justify-content: center;
   background-color: #121212;
   color: #e0e0e0;
 }
 
-.container {
+.container{
   max-width: 1400px;
   width: 100%;
   background-color: #1e1e1e;
@@ -24,14 +24,14 @@ body {
 header,
 #gameSection,
 #introVideo,
-#commentSection {
+#commentSection{
   max-width: 100%;
 }
 
 /* !================================================================================================
 *Header 
 !===================================================================================================*/
-.header {
+.header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,14 +44,14 @@ header,
   max-width: 100vw;
 }
 
-.header .nav {
+.header .nav{
   display: flex;
   gap: 15px;
   flex-grow: 1;
   justify-content: center;
 }
 
-.header .nav a {
+.header .nav a{
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -64,82 +64,64 @@ header,
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.header .nav a:hover {
+.header .nav a:hover{
   background-color: #1764a2;
   color: #121212;
 }
 
-/* Settings Menu Container */
-.setting {
+.setting{
   position: relative;
 }
 
-/* Settings Button */
-.setting-btn {
-  background: none;
-  border: none;
-  color: #e0e0e0;
-  cursor: pointer;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.setting-btn:hover {
-  color: #ff4d4d;
-}
-
-.header .title {
+.header .title{
   display: flex;
   align-items: center;
 }
 
-.header .title a {
+.header .title a{
   display: flex;
   align-items: center;
   text-decoration: none;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.header .title a:hover {
+.header .title a:hover{
   transform: scale(1.1);
 }
 
-.header .title a:active {
+.header .title a:active{
   transform: scale(1.05);
 }
 
-.header .title img {
+.header .title img{
   max-width: 55px;
   margin: 0px;
 }
 
-.header .title span {
+.header .title span{
   font-size: 24px;
   font-weight: bold;
   color: #e2f2ff;
 }
 
-.header .title a:hover img {
+.header .title a:hover img{
   transform: scale(1.2);
 }
 
-.header .title a:hover span {
+.header .title a:hover span{
   color: #d0e9fd;
 }
 
 
-/* Settings Menu Container */
-.setting {
+.setting{
   position: relative;
 }
 
-/* Hide the checkbox */
-.settings-checkbox {
+.settings-checkbox{
   display: none;
 }
 
-/* Settings Button */
-.setting-btn {
+.setting-btn{
   font-size: 18px;
   cursor: pointer;
   background-color: transparent;
@@ -150,13 +132,12 @@ header,
   transition: background-color 0.3s ease;
 }
 
-.setting-btn:hover {
+.setting-btn:hover{
   background-color: #1764a2;
   color: #121212;
 }
 
-/* Settings Menu */
-.settings-menu {
+.settings-menu{
   display: none;
   position: absolute;
   top: 40px;
@@ -170,23 +151,21 @@ header,
   width: 200px;
 }
 
-/* Show the menu when the checkbox is checked */
-.settings-checkbox:checked + .setting-btn + .settings-menu {
+.settings-checkbox:checked + .setting-btn + .settings-menu{
   display: block;
 }
 
-/* User Info Section */
-.user-info {
+.user-info{
   text-align: center;
 }
 
-.welcome-text {
+.welcome-text{
   font-size: 14px;
   color: #e0e0e0;
   margin-bottom: 10px;
 }
 
-.logout-btn, .login-btn {
+.logout-btn, .login-btn{
   display: block;
   text-align: center;
   font-size: 14px;
@@ -200,13 +179,13 @@ header,
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-.logout-btn:hover, .login-btn:hover {
+.logout-btn:hover, .login-btn:hover{
   background-color: #ff6666;
   color: #121212;
   transform: scale(1.05);
 }
 
-.logout-btn:focus, .login-btn:focus {
+.logout-btn:focus, .login-btn:focus{
   outline: none;
   box-shadow: 0 0 5px #ff4d4d;
 }
@@ -214,13 +193,13 @@ header,
 /* !================================================================================================
 *Intro VIdeo 
 !===================================================================================================*/
-#introVideo {
+#introVideo{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#introVideo video {
+#introVideo video{
   max-width: 500px;
   position: static;
   margin: 10px 20px 30px;
@@ -230,7 +209,7 @@ header,
 /* !================================================================================================
 *Game section 
 !===================================================================================================*/
-#gameSection {
+#gameSection{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -241,18 +220,18 @@ header,
   gap: 15px;
 }
 
-#gameSection a {
-  text-decoration: none; /* Remove any default underlining */
+#gameSection a{
+  text-decoration: none;
 }
 
 
-#gameSection a:active {
+#gameSection a:active{
   color: #e0e0e0;
   background-color: transparent;
   text-decoration: none;
 }
 
-#gameSectioncontainer {
+#gameSectioncontainer{
   background-color: #1e1e1e;
   border: 3px solid #1764a2;
   border-radius: 5px;
@@ -261,7 +240,7 @@ header,
   box-shadow: 10px 10px 10px #000;
 }
 
-.individualGameSection {
+.individualGameSection{
   font-family: "Karla", sans-serif;
   width: 200px;
   height: 300px;
@@ -277,19 +256,19 @@ header,
     border-color 0.3s ease;
 }
 
-#gameSectionTitle {
+#gameSectionTitle{
   font-family: "Karla", sans-serif;
   color: #124c7b;
   margin-left: 30px;
 }
 
-.individualGameSection:hover {
+.individualGameSection:hover{
   transform: scale(1.05);
   background-color: #2a2a2a;
   border: 2px solid #0a273e;
 }
 
-.individualGameSection .logo {
+.individualGameSection .logo{
   height: 100px;
   display: flex;
   justify-content: center;
@@ -297,18 +276,18 @@ header,
   overflow: hidden;
 }
 
-.individualGameSection .logo img {
+.individualGameSection .logo img{
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
-.gameContent {
+.gameContent{
   text-align: center;
   margin-top: 10px;
 }
 
-.gameContent h3 {
+.gameContent h3{
   font-family: "Karla", sans-serif;
   font-size: 16px;
   color: #e0e0e0;
@@ -316,21 +295,21 @@ header,
   text-align: center;
 }
 
-.summary {
+.summary{
   font-size: 12px;
   color: #e0e0e0;
   margin-bottom: 5px;
 }
 
-.moreText {
+.moreText{
   font-size: 12px;
   color: #999999;
   cursor: pointer;
   opacity: 0;
 }
 
-.individualGameSection:hover .moreText {
-  max-height: 100px; /* Enough to display additional text */
+.individualGameSection:hover .moreText{
+  max-height: 100px;
   opacity: 1;
 }
 
@@ -338,8 +317,7 @@ header,
 *Comment Section 
 !===================================================================================================*/
 
-/* Comment Section Container */
-#commentSectionContainer {
+#commentSectionContainer{
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -349,8 +327,7 @@ header,
   color: #ffffff;
 }
 
-/* Section Title */
-#commentSectionTitle {
+#commentSectionTitle{
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   color: #ffffff;
@@ -360,15 +337,14 @@ header,
   padding-bottom: 10px;
 }
 
-/* Add Comment Form */
-.add-comment {
+.add-comment{
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-bottom: 20px;
 }
 
-textarea#commentInput {
+textarea#commentInput{
   width: 100%;
   min-height: 100px;
   padding: 12px;
@@ -383,13 +359,12 @@ textarea#commentInput {
   box-sizing: border-box;
 }
 
-textarea#commentInput::placeholder {
+textarea#commentInput::placeholder{
   color: #768a96;
   opacity: 0.7;
 }
 
-/* Submit Button */
-button[type="submit"] {
+button[type="submit"]{
   align-self: flex-end;
   padding: 12px 25px;
   background-color: #44567d;
@@ -402,19 +377,19 @@ button[type="submit"] {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover{
   background-color: #576b8d;
   transform: scale(1.05);
 }
 
 /* Comments List */
-#comments {
+#comments{
   list-style: none;
   padding: 0;
 }
 
 /* Individual Comment */
-.comment {
+.comment{
   display: flex;
   flex-direction: column;
   padding: 15px;
@@ -425,28 +400,27 @@ button[type="submit"]:hover {
   gap: 10px;
 }
 
-/* Comment Header */
-.comment-content > div {
+.comment-content > div{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.comment-user {
+.comment-user{
   font-family: "Karla", sans-serif;
   font-weight: bold;
   color: #ffffff;
   font-size: 15px;
 }
 
-.comment-time {
+.comment-time{
   font-size: 13px;
   font-family: "Karla", sans-serif;
   color: #768a96;
 }
 
 /* Comment Text */
-.comment-text {
+.comment-text{
   font-family: "Karla", sans-serif;
   font-size: 14px;
   color: #dfe5ea;
@@ -454,20 +428,19 @@ button[type="submit"]:hover {
 }
 
 /* Comment Actions */
-.comment-actions {
+.comment-actions{
   display: flex;
-  justify-content: space-between; /* Align buttons to the left and right */
+  justify-content: space-between;
   align-items: center;
   margin-top: 5px;
 }
 
-/* Wrapper for Edit and Delete buttons */
-.comment-edit-delete {
+.comment-edit-delete{
   display: flex;
-  gap: 10px; /* Add some space between the buttons */
+  gap: 10px;
 }
 
-.comment-actions button {
+.comment-actions button{
   background-color: transparent;
   color: #aac7db;
   border: none;
@@ -476,7 +449,7 @@ button[type="submit"]:hover {
   transition: color 0.3s ease;
 }
 
-.comment-actions button:hover {
+.comment-actions button:hover{
   color: #ffffff;
 }
 
@@ -485,39 +458,38 @@ button[type="submit"]:hover {
 *footer
 !===================================================================================================*/
 /* Footer styles */
-footer {
+footer{
   background-color: #333;
   color: #fff;
-  padding: 10px 20px; /* Reduced padding */
+  padding: 10px 20px;
   text-align: center;
   width: 100%;
   clear: both;
 }
 
-footer .site-name {
-  font-size: 20px; /* Slightly smaller font size */
+footer .site-name{
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px; /* Reduced margin */
+  margin-bottom: 10px;
 }
 
 footer .creator-info,
-footer .copyright {
-  margin-bottom: 8px; /* Reduced margin */
+footer .copyright{
+  margin-bottom: 8px;
 }
 
-footer p {
-  margin: 4px 0; /* Reduced margin */
-  font-size: 14px; /* Smaller font size */
-  line-height: 1.5; /* Improve readability */
+footer p{
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-/* Add responsiveness */
-@media (max-width: 600px) {
-  footer .site-name {
-    font-size: 18px; /* Adjust font size for smaller screens */
+@media (max-width: 600px){
+  footer .site-name{
+    font-size: 18px;
   }
 
-  footer p {
-    font-size: 12px; /* Adjust font size for smaller screens */
+  footer p{
+    font-size: 12px;
   }
 }

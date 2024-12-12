@@ -1,11 +1,11 @@
-* {
+*{
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
 
-body {
+body{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@ body {
   color: #e0e0e0;
 }
 
-.container {
+.container{
   max-width: 1400px;
   width: 100%;
   background-color: #1e1e1e;
@@ -27,14 +27,14 @@ body {
 header,
 #gameSection,
 #introVideo,
-#commentSection {
+#commentSection{
   max-width: 100%;
 }
 
 /* !================================================================================================
   *Header 
   !===================================================================================================*/
-.header {
+.header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,14 +48,14 @@ header,
   margin: 0 auto;
 }
 
-.header .nav {
+.header .nav{
   display: flex;
   gap: 15px;
   flex-grow: 1;
   justify-content: center;
 }
 
-.header .nav a {
+.header .nav a{
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -68,21 +68,21 @@ header,
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.header .nav a:hover {
+.header .nav a:hover{
   background-color: #1764a2;
   color: #121212;
 }
 
-.header .setting img {
+.header .setting img{
   width: 20px;
   height: 20px;
 }
 
-.header .login {
+.header .login{
   margin-left: 15px;
 }
 
-.header .login a {
+.header .login a{
   font-size: 13px;
   font-weight: bold;
   color: #081d2f;
@@ -95,63 +95,60 @@ header,
     color 0.3s ease;
 }
 
-.header .login a:hover {
+.header .login a:hover{
   background-color: #4078e9;
   border-color: #1f3d7a;
   color: #121212;
 }
 
-.header .title {
+.header .title{
   display: flex;
   align-items: center;
 }
 
-.header .title a {
+.header .title a{
   display: flex;
   align-items: center;
   text-decoration: none;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.header .title a:hover {
+.header .title a:hover{
   transform: scale(1.1);
 }
 
-.header .title a:active {
+.header .title a:active{
   transform: scale(1.05);
 }
 
-.header .title img {
+.header .title img{
   max-width: 55px;
   margin: 0px;
 }
 
-.header .title span {
+.header .title span{
   font-size: 24px;
   font-weight: bold;
   color: #e2f2ff;
 }
 
-.header .title a:hover img {
+.header .title a:hover img{
   transform: scale(1.2);
 }
 
-.header .title a:hover span {
+.header .title a:hover span{
   color: #d0e9fd;
 }
 
-/* Settings Menu Container */
-.setting {
+.setting{
   position: relative;
 }
 
-/* Hide the checkbox */
-.settings-checkbox {
+.settings-checkbox{
   display: none;
 }
 
-/* Settings Button */
-.setting-btn {
+.setting-btn{
   font-size: 18px;
   cursor: pointer;
   background-color: transparent;
@@ -162,13 +159,12 @@ header,
   transition: background-color 0.3s ease;
 }
 
-.setting-btn:hover {
+.setting-btn:hover{
   background-color: #1764a2;
   color: #121212;
 }
 
-/* Settings Menu */
-.settings-menu {
+.settings-menu{
   display: none;
   position: absolute;
   top: 40px;
@@ -182,23 +178,21 @@ header,
   width: 200px;
 }
 
-/* Show the menu when the checkbox is checked */
-.settings-checkbox:checked + .setting-btn + .settings-menu {
+.settings-checkbox:checked + .setting-btn + .settings-menu{
   display: block;
 }
 
-/* User Info Section */
-.user-info {
+.user-info{
   text-align: center;
 }
 
-.welcome-text {
+.welcome-text{
   font-size: 14px;
   color: #e0e0e0;
   margin-bottom: 10px;
 }
 
-.logout-btn, .login-btn {
+.logout-btn, .login-btn{
   display: block;
   text-align: center;
   font-size: 14px;
@@ -212,80 +206,81 @@ header,
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-.logout-btn:hover, .login-btn:hover {
+.logout-btn:hover, .login-btn:hover{
   background-color: #ff6666;
   color: #121212;
   transform: scale(1.05);
 }
 
-.logout-btn:focus, .login-btn:focus {
+.logout-btn:focus, .login-btn:focus{
   outline: none;
   box-shadow: 0 0 5px #ff4d4d;
 }
 
 
+
 /* !================================================================================================
 * Game Section
 !================================================================================================ */
-#gameSection {
-  padding: 30px;
-  margin: 20px auto;
-  background-color: #2a2a2a;
-  border-radius: 12px;
-  max-width: 800px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+#gameSection{
+padding: 30px;
+margin: 20px auto;
+background-color: #2a2a2a;
+border-radius: 12px;
+max-width: 800px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
 }
 
-#gameSection .game-header {
-  text-align: center;
-  margin-bottom: 20px;
+#gameSection .game-header{
+text-align: center;
+margin-bottom: 20px;
 }
 
-#gameSection .game-header h1 {
-  font-size: 28px;
-  font-family: "Montserrat", sans-serif;
-  color: #ffc107;
+#gameSection .game-header h1{
+font-size: 28px;
+font-family: "Montserrat", sans-serif;
+color: #ffc107;
 }
 
-#gameSection .game-header p {
-  font-size: 16px;
-  color: #aac7db;
+#gameSection .game-header p{
+font-size: 16px;
+color: #aac7db;
 }
 
-#gameSection .section {
-  margin-bottom: 30px;
+#gameSection .section{
+margin-bottom: 30px;
 }
 
-#gameSection .section h2 {
-  font-size: 30px;
-  font-family: "Montserrat", sans-serif;
-  color: #ffc107;
-  margin-bottom: 10px;
+#gameSection .section h2{
+font-size: 30px;
+font-family: "Montserrat", sans-serif;
+color: #ffc107;
+margin-bottom: 10px;
 }
 
 #gameSection .section p,
 #gameSection .section ul,
-#gameSection .section ol {
-  font-size: 16px;
-  color: #e0e0e0;
-  line-height: 1.8;
+#gameSection .section ol{
+font-size: 16px;
+color: #e0e0e0;
+line-height: 1.8;
 }
 
-#gameSection .section strong {
-  font-size: 25px;
+#gameSection .section strong{
+font-size: 25px;
 }
 
 #gameSection .section ul li,
-#gameSection .section ol li {
-  margin-bottom: 10px;
+#gameSection .section ol li{
+margin-bottom: 10px;
 }
 
-#gameSection .section.video-tutorial video {
-  display: block;
-  max-width: 100%;
-  margin: 10px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+#gameSection .section.video-tutorial video{
+display: block;
+max-width: 100%;
+margin: 10px auto;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* !================================================================================================
@@ -293,162 +288,164 @@ header,
 !================================================================================================ */
 
 .how-to-play-section,
-.tips-section {
-  padding: 30px;
-  margin: 20px auto;
-  background-color: #2a2a2a;
-  border-radius: 12px;
-  max-width: 800px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+.tips-section{
+padding: 30px;
+margin: 20px auto;
+background-color: #2a2a2a;
+border-radius: 12px;
+max-width: 800px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
 }
 
 .how-to-play-section .how-to-play-header,
-.tips-section .tips-header {
-  text-align: center;
-  margin-bottom: 20px;
+.tips-section .tips-header{
+text-align: center;
+margin-bottom: 20px;
 }
 
 .how-to-play-section .how-to-play-header h1,
-.tips-section .tips-header h1 {
-  font-size: 28px;
-  font-family: "Montserrat", sans-serif;
-  color: #ffc107;
+.tips-section .tips-header h1{
+font-size: 28px;
+font-family: "Montserrat", sans-serif;
+color: #ffc107;
 }
 
 .how-to-play-section .how-to-play-header p,
-.tips-section .tips-header p {
-  font-size: 16px;
-  color: #aac7db;
-  margin: 0;
+.tips-section .tips-header p{
+font-size: 16px;
+color: #aac7db;
+margin: 0;
 }
 
+
 .step,
-.tip {
-  background-color: #333333;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+.tip{
+background-color: #333333;
+padding: 15px;
+border-radius: 8px;
+margin-bottom: 15px;
+display: flex;
+align-items: flex-start;
+gap: 15px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .step:last-child,
-.tip:last-child {
-  margin-bottom: 0;
+.tip:last-child{
+margin-bottom: 0;
 }
 
 .step-icon,
-.tip-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #ffc107;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #2a2a2a;
-  font-size: 20px;
-  font-weight: bold;
-  flex-shrink: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+.tip-icon{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background-color: #ffc107;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #2a2a2a;
+font-size: 20px;
+font-weight: bold;
+flex-shrink: 0;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .step-content,
-.tip-content {
-  flex: 1;
+.tip-content{
+flex: 1;
 }
 
 .step-title,
-.tip-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  color: #ffc107;
-  margin-bottom: 8px;
+.tip-title{
+font-family: "Montserrat", sans-serif;
+font-size: 18px;
+font-weight: bold;
+color: #ffc107;
+margin-bottom: 8px;
 }
 
 .step-description,
-.tip-description {
-  font-family: "Karla", sans-serif;
-  font-size: 16px;
-  color: #e0e0e0;
-  line-height: 1.6;
+.tip-description{
+font-family: "Karla", sans-serif;
+font-size: 16px;
+color: #e0e0e0;
+line-height: 1.6;
 }
 
 /* Responsive Styling */
-@media (max-width: 768px) {
-  .how-to-play-section .step,
-  .tips-section .tip {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .step-icon,
-  .tip-icon {
-    margin-bottom: 10px;
-  }
-}
-
-.image-container {
-  display: flex;
+@media (max-width: 768px){
+.how-to-play-section .step,
+.tips-section .tip{
   flex-direction: column;
-  align-items: center;
-  margin: 20px auto;
-  max-width: 600px;
+  align-items: flex-start;
 }
 
-.image-container img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+.step-icon,
+.tip-icon{
+  margin-bottom: 10px;
+}
 }
 
-.image-container .image-caption {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #e0e0e0;
-  text-align: center;
+
+
+.image-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 20px auto;
+max-width: 600px;
 }
+
+.image-container img{
+max-width: 100%;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.image-container .image-caption{
+margin-top: 10px;
+font-size: 14px;
+color: #e0e0e0;
+text-align: center;
+}
+
 
 /* !================================================================================================
 *footer
 !===================================================================================================*/
-/* Footer styles */
-footer {
+footer{
   background-color: #333;
   color: #fff;
-  padding: 10px 20px; /* Reduced padding */
+  padding: 10px 20px;
   text-align: center;
   width: 100%;
   clear: both;
 }
 
-footer .site-name {
-  font-size: 20px; /* Slightly smaller font size */
+footer .site-name{
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px; /* Reduced margin */
+  margin-bottom: 10px;
 }
 
 footer .creator-info,
-footer .copyright {
-  margin-bottom: 8px; /* Reduced margin */
+footer .copyright{
+  margin-bottom: 8px;
 }
 
-footer p {
-  margin: 4px 0; /* Reduced margin */
-  font-size: 14px; /* Smaller font size */
-  line-height: 1.5; /* Improve readability */
+footer p{
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-/* Add responsiveness */
-@media (max-width: 600px) {
-  footer .site-name {
-    font-size: 18px; /* Adjust font size for smaller screens */
+@media (max-width: 600px){
+  footer .site-name{
+    font-size: 18px;
   }
 
-  footer p {
-    font-size: 12px; /* Adjust font size for smaller screens */
+  footer p{
+    font-size: 12px;
   }
 }
